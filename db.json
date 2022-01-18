@@ -1,0 +1,28 @@
+{
+  "operators": [
+    {
+      "id": 1,
+      "name": "Abdullajon Mashrabov",
+      "email": "@mashrabov",
+      "talking": "22",
+      "messages": "532",
+      "active": "0.8"
+    },
+    {
+      "id": 2,
+      "name": "Alison Armstrong",
+      "email": "@alison2000",
+      "talking": "22",
+      "messages": "532",
+      "active": "0.8"
+    },
+    {
+      "id": 3,
+      "name": "Abdullajon Mashrabov",
+      "email": "@mashrabov",
+      "talking": "22",
+      "messages": "532",
+      "active": "0.8"
+    }
+  ]
+}

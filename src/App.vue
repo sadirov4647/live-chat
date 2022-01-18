@@ -8,6 +8,7 @@ body{
   box-sizing: border-box;
   font-size: 22px;
   line-height: 28px;
+  height: 100vh;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

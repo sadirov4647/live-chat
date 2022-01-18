@@ -18,7 +18,34 @@ const routes = [
   {
     path:'/admin',
     name:"Admin",
-    component:Admin
+    component:Admin,
+    children:[
+      {
+        path:'chat',
+        name:'Chat',
+        component:() => import('../components/Admin/AdminRoutes/Chat.vue')
+      },
+      {
+        path:'main-page',
+        name:'Main',
+        component:() => import('../components/Admin/AdminRoutes/MainPage.vue')
+      },
+      {
+        path:'report',
+        name:'Report',
+        component:() => import('../components/Admin/AdminRoutes/Report.vue')
+      },
+      {
+        path:'operator-settings',
+        name:'OperatorSettings',
+        component:() => import('../components/Admin/AdminRoutes/OperatorSettings.vue')
+      },
+      {
+        path:'bot-settings',
+        name:'BotSettings',
+        component:() => import('../components/Admin/AdminRoutes/BotSettings.vue')
+      },
+    ]
   },
   {
     path:'/operator',

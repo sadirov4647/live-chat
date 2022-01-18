@@ -26,7 +26,7 @@
         methods:{
             submitBot(){
                 console.log(this.botName)
-                this.$router.push('/admin')
+                this.$router.push('/admin/main-page')
             }
         }
     }
