@@ -19,6 +19,7 @@ const routes = [
     path:'/admin',
     name:"Admin",
     component:Admin,
+    props:true,
     children:[
       {
         path:'chat',
@@ -36,9 +37,20 @@ const routes = [
         component:() => import('../components/Admin/AdminRoutes/Report.vue')
       },
       {
+        path:'report/:id',
+        name:'ReportChild',
+        component:() => import('../components/Admin/AdminRoutes/ReportChild.vue'),
+        props:true
+      },
+      {
         path:'operator-settings',
         name:'OperatorSettings',
-        component:() => import('../components/Admin/AdminRoutes/OperatorSettings.vue')
+        component:() => import('../components/Admin/AdminRoutes/OperatorSettings.vue'),
+      },
+      {
+        path:"add-operator",
+        name:"AddOperator",
+        component:() => import('../components/Admin/AdminRoutes/AddOperator.vue')
       },
       {
         path:'bot-settings',

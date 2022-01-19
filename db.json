@@ -4,25 +4,25 @@
       "id": 1,
       "name": "Abdullajon Mashrabov",
       "email": "@mashrabov",
-      "talking": "22",
-      "messages": "532",
-      "active": "0.8"
+      "talking": "17",
+      "messages": "689",
+      "active": "0.6"
     },
     {
       "id": 2,
-      "name": "Alison Armstrong",
+      "name": "Oygul Bekova",
       "email": "@alison2000",
-      "talking": "22",
+      "talking": "36",
       "messages": "532",
       "active": "0.8"
     },
     {
       "id": 3,
-      "name": "Abdullajon Mashrabov",
-      "email": "@mashrabov",
+      "name": "Elena Tatyana",
+      "email": "@elena",
       "talking": "22",
-      "messages": "532",
-      "active": "0.8"
+      "messages": "927",
+      "active": "0.4"
     }
   ]
 }

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+    import axios from 'axios'
     import RemoveOperatorIcon from '../../../assets/images/removeicon.png'
     import OperatorImage from '../../../assets/images/operatorimage.png'
     export default {

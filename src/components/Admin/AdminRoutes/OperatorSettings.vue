@@ -5,11 +5,15 @@
         <ul class="operator-list">
             <OperatorList :operator="operator" v-for="(operator, id) in operators" :key="id"/>
         </ul>
+        <router-link :to="{name:'AddOperator'}" class="add-operator__image">
+            <img :src="operatorImage" alt="add operator" width="121" height="121">
+        </router-link>
     </div>
 </template>
 
 <script>
-    import axios from 'axios'
+    import EventServices from '../../../../services/EventServices'
+    import AddOperatorImage from '../../../assets/images/addOperator.png'
     import OperatorList from "../AdminRoutes/OperatorsList.vue"
     export default {
         name:"OperatorSettings",
@@ -18,11 +22,12 @@
         },
         data(){
             return{
-                operators:[]
+                operators:[],
+                operatorImage:AddOperatorImage
             }
         },
         created(){
-            axios.get('http://localhost:3000/operators')
+            EventServices.getOperators()
             .then(response => {
                 this.operators = response.data
             })
@@ -37,7 +42,8 @@
     .operator-settings{
         padding-left: 50px;
         padding-right: 80px;
-        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
     .operator-settings h1{
         color: #2262C6;
@@ -49,5 +55,11 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
+    }
+    .add-operator__image{
+        align-self: flex-end;
+        border: none;
+        background: inherit;
+        cursor: pointer;
     }
 </style>
