@@ -40,6 +40,7 @@
     .report-title{
         color: #2262C6;
         text-align: left;
+        margin: 0;
     }
     .hr{
         opacity: 0.5;

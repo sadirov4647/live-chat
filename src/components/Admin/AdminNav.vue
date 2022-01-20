@@ -1,31 +1,32 @@
 <template>
     <div class="admin-nav">
         <router-link class="admin-nav__links chat" :to="{name:'Chat'}">
+            <p class="chat-title">chat</p>
             <p>Chatga o'tish</p>
         </router-link>
         <router-link class="admin-nav__links active" :to="{name:'Main'}">
-            <img :src="mainPageImage" alt="main image" width="50" height="50">
+            <img :src="mainPageImage" alt="main image" width="40" height="40">
             <p>Asosiy sahifa</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'Report'}">
-            <img :src="operatorImage" alt="" width="50" height="50">
+            <img :src="operatorImage" alt="" width="40" height="40">
             <p>Hisobotni olish</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'OperatorSettings'}">
-            <img :src="operatorImage" alt="opererator" width="50" height="50">
+            <img :src="operatorImage" alt="opererator" width="40" height="40">
             <p>Operator sozlamasi</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'BotSettings'}">
-            <img :src="settingsBot" alt="" width="50" height="50">
+            <img :src="settingsBot" alt="" width="40" height="40">
             <p>Bot sozlamasi</p>
         </router-link>
     </div>
 </template>
 
 <script>
-import SettingsBotImage from '../../assets/images/settingsbot.png'
-import OperatorImage from '../../assets/images/operator.png'
-import MainPageImage from '../../assets/images/mainPage.png'
+    import SettingsBotImage from '../../assets/images/settingsbot.png'
+    import OperatorImage from '../../assets/images/operator.png'
+    import MainPageImage from '../../assets/images/mainPage.png'
     export default {
         name:"Admin",
         data(){
@@ -40,7 +41,7 @@ import MainPageImage from '../../assets/images/mainPage.png'
 
 <style scoped>
     .admin-nav{
-        max-width: 336px;
+        max-width: 300px;
         width: 100%;
         background-color: #2262C6;
         padding-top: 60px;
@@ -53,12 +54,17 @@ import MainPageImage from '../../assets/images/mainPage.png'
         display: flex;
         align-items: center;
         padding: 21px 0;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
         text-decoration: none;
         color: #fff;
     }
     .admin-nav__links p{
         margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
     }
     .chat{
         display: block;
@@ -69,12 +75,26 @@ import MainPageImage from '../../assets/images/mainPage.png'
         margin-bottom: 45px;
         color: #2262C6;
     }
+    .chat-title{
+        display: none;
+    }
     .active{
         background-color: #205BB7;
     }
-    @media screen and (max-width:1080px) {
+    @media screen and (max-width:820px) {
         .admin-nav__links p{
             display: none;
+        }
+        .chat-title{
+            display: block;
+        }
+        .admin-nav{
+            align-items: center;
+            max-width: 100px;
+        }
+        .active{
+            max-width: 50px;
+            width: 100%;
         }
     }
 </style>

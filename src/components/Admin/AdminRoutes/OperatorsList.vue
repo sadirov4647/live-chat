@@ -9,14 +9,14 @@
 
     <li class="operator-item">
         <div class="operator-left__info">
-            <img class="operator-image" :src="operatorImage" alt="operator image" width="82" height="82">
+            <img class="operator-image" :src="operatorImage" alt="operator image" width="60" height="60">
             <div class="operator-info">
                 <h3 class="operator-title">{{ operator.name }}</h3>
                 <p class="operator-email">{{ operator.email }}</p>
             </div>
         </div>
         <button class="remove-btn" @click="removeOperatorModal">
-            <img :src="removeIcon" alt="remove icon" width="38" height="38">
+            <img :src="removeIcon" alt="remove icon" width="24" height="24">
         </button>
     </li>
 </template>
@@ -58,20 +58,21 @@
         padding: 22px 32px;
         background-color: #F6F6F6;
         border-radius: 15px;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
     }
     .operator-title{
         margin: 0;
         font-weight: bold;
-        font-size: 31px;
-        line-height: 40px;
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 5px;
     }
     .operator-email{
         margin: 0;
         align-self: flex-start;
         font-weight: bold;
-        font-size: 24px;
-        line-height: 31px;
+        font-size: 16px;
+        line-height: 16px;
         color: #565656;
     }
     .remove-btn{
@@ -120,5 +121,23 @@
     }
     .modal-no{
         background-color: #2262C6;
+    }
+    @media screen and (max-width:820px) {
+        .operator-title{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .remove-btn img{
+            width: 18px;
+            height: 18px;
+        }
+        .operator-item{
+            padding: 18px 28px;
+        }
+    }
+    @media screen and (max-width:550px) {
+        .operator-image{
+            margin-right: 20px;
+        }
     }
 </style>

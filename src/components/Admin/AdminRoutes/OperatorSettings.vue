@@ -1,12 +1,12 @@
 <template>
     <div class="operator-settings">
-        <h1>Operatorlar ro'yxati</h1>
+        <h2>Operatorlar ro'yxati</h2>
         <hr>
         <ul class="operator-list">
             <OperatorList :operator="operator" v-for="(operator, id) in operators" :key="id"/>
         </ul>
         <router-link :to="{name:'AddOperator'}" class="add-operator__image">
-            <img :src="operatorImage" alt="add operator" width="121" height="121">
+            <img :src="operatorImage" alt="add operator" width="90" height="90">
         </router-link>
     </div>
 </template>
@@ -40,13 +40,12 @@
 
 <style scoped>
     .operator-settings{
-        padding-left: 50px;
-        padding-right: 80px;
         display: flex;
         flex-direction: column;
     }
-    .operator-settings h1{
+    .operator-settings h2{
         color: #2262C6;
+        margin: 0;
     }
     hr{
         opacity: 0.5;
@@ -61,5 +60,18 @@
         border: none;
         background: inherit;
         cursor: pointer;
+    }
+
+    @media screen and (max-width:820px) {
+        .add-operator__image img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+    @media screen and (max-width:550px) {
+        .operator-settings h2{
+            line-height: 34px;
+            font-size: 24px;
+        }
     }
 </style>

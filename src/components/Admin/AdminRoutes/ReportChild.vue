@@ -11,7 +11,7 @@
                 </div>
             </div>
             <button class="reportchild-operator__upload">
-                <img :src="reportUpload" alt="upload image" width="76" height="76">
+                <img :src="reportUpload" alt="upload image" width="52" height="52">
             </button>
         </div>
         <div class="choose-report__date">
@@ -27,6 +27,9 @@
             <BaseCard title="Xabarlar soni" :count="reportOperator.messages" />
             <BaseCard title="O'rtacha aktivlik" :count="reportOperator.active" />
         </div>
+       <div id="chart">
+        <apexchart type="area" height="350" :options="chartOptions" :series="series"></apexchart>
+      </div>
     </div>
 </template>
 
@@ -39,10 +42,40 @@
         name:"ReportChild",
         props:['id'],
         components:{
-            BaseCard
+            BaseCard,
+            apexchart: VueApexCharts,
         },
         data(){
             return{
+                 series: [{
+            name: 'series1',
+            data: [31, 40, 28, 51, 42, 109, 100]
+          }, {
+            name: 'series2',
+            data: [11, 32, 45, 32, 34, 52, 41]
+          }],
+          chartOptions: {
+            chart: {
+              height: 350,
+              type: 'area'
+            },
+            dataLabels: {
+              enabled: false
+            },
+            stroke: {
+              curve: 'smooth'
+            },
+            xaxis: {
+              type: 'datetime',
+              categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            },
+            tooltip: {
+              x: {
+                format: 'dd/MM/yy HH:mm'
+              },
+            },
+          },
+
                 reportOperator:[],
                 reportImage:ReportOperatorImage,
                 reportUpload:ReportUpload

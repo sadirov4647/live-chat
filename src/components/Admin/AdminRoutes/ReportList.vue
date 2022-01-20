@@ -2,14 +2,14 @@
     <li>
         <router-link class="report-operator__item" :to="{ name:'ReportChild', params:{ id: operator.id } }">
             <div class="report-operator__left">
-                <img class="report-operator__image" :src="reportOperatorImage" alt="report operator" width="82" height="82">
+                <img class="report-operator__image" :src="reportOperatorImage" alt="report operator" width="52" height="52">
                 <div class="report-operator__wrapper">
                     <h3>{{ operator.name }}</h3>
                     <p>{{ operator.email }}</p>
                 </div>
             </div>
             <button class="remove-btn" @click="removeOperatorModal">
-                <img :src="removeIcon" alt="remove icon" width="38" height="38">
+                <img :src="removeIcon" alt="remove icon" width="24" height="24">
             </button>
         </router-link>
     </li>
@@ -52,8 +52,16 @@
     .report-operator__wrapper h3{
         margin-top: 0;
         margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        color: #000000;
     }
     .report-operator__wrapper p{
         margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        color: #565656;
+        line-height: 22px;
     }
 </style>

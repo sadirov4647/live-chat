@@ -32,10 +32,11 @@
     }
     .add-operator h2{
         font-weight: bold;
-        font-size: 40px;
-        line-height: 52px;
+        font-size: 32px;
+        line-height: 40px;
         color: #2262C6;
         text-align: left;
+        margin: 0;
     }
     .add-operator__wrapper{
         display: flex;
@@ -59,5 +60,17 @@
         border-radius: 16px;
         color: #fff;
         cursor: pointer;
+    }
+    @media screen and (max-width:820px) {
+        .add-operator h2{
+            font-size: 28px;
+            line-height: 36px;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .add-operator h2{
+            font-size: 24px;
+            line-height: 28px;
+        }
     }
 </style>

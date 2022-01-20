@@ -1,15 +1,15 @@
 <template>
     <div class="admin-top">
-        <img :src="mainLogo" alt="main logo" width="349" height="84">
+        <img class="main-logo" :src="mainLogo" alt="main logo" width="300" height="72">
         <div class="admin-top__input">
             <label for="search"></label>
             <input type="search" placeholder="izlash">
         </div>
         <div class="admin-top__features">
-            <button><img :src="warningIcon" alt="warning" width="38" height="38"></button>
-            <button><img :src="questionIcon" alt="question" width="38" height="38"></button>
-            <button><img :src="settingsIcon" alt="setting" width="38" height="38"></button>
-            <button><img :src="userIcon" alt="setting" width="54" height="54"></button>
+            <button><img :src="warningIcon" alt="warning" width="28" height="28"></button>
+            <button><img :src="questionIcon" alt="question" width="28" height="28"></button>
+            <button class="admin-top__settings"><img :src="settingsIcon" alt="setting" width="28" height="28"></button>
+            <button><img :src="userIcon" alt="setting" width="42" height="42"></button>
         </div>
     </div>
 </template>
@@ -41,9 +41,10 @@
         justify-content: space-between;
         padding-left: 22px;
         padding-right: 48px;
+        padding-top: 15px;
     }
     .admin-top__input{
-        max-width: 430px;
+        max-width: 350px;
         width: 100%;
         padding: 12px 23px;
         background-color: #F1F2F7;
@@ -74,4 +75,29 @@
         cursor: pointer;
         background-color: #fff;
     }
+
+    @media screen and (max-width:970px) {
+        .admin-top__input{
+            max-width: 200px;
+        }
+    }
+
+    @media screen and (max-width:820px) {
+        .main-logo{
+            width: 220px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .admin-top__input::before{
+            width: 32px;
+            height: 20px;
+        }
+        .admin-top__input{
+            max-width: 150px;
+        }
+        .admin-top__settings{
+            display: none;
+        }
+    }
+
 </style>
