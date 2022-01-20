@@ -3,7 +3,7 @@
         <h2 class="report-title">Hisobot olish</h2>
         <hr>
         <div class="report-operator">
-            <h3>Operatorni tanlang</h3>
+            <h3 class="choose-operator__title">Operatorni tanlang</h3>
             <ul class="report-operator__list">
                 <ReportList :operator="operator" v-for="(operator, id) in operators" :key="id"/>
             </ul>
@@ -43,5 +43,9 @@
     }
     .hr{
         opacity: 0.5;
+    }
+    .choose-operator__title{
+        color: #CBCBCB;
+        text-align: center;
     }
 </style>

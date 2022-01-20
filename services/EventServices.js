@@ -12,5 +12,8 @@ const apiClient = axios.create({
 export default {
     getOperators(){
         return apiClient.get('/operators')
+    },
+    getOperatorId(id){
+        return apiClient.get(`/operators/${id}`)
     }
 }
