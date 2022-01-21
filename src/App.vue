@@ -10,7 +10,7 @@ body{
   margin: 0;
 }
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'PT Sans Caption', sans-serif;
   font-weight: 500;
   box-sizing: border-box;
   color: #000000;

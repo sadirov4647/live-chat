@@ -4,7 +4,7 @@
         <hr>
         <div class="reportchild-operator">
             <div class="reportchild-operator__wrapper">
-                <img :src="reportImage" alt="report operator image" width="189" height="189">
+                <img :src="reportImage" alt="report operator image" width="120" height="120">
                 <div class="reportchild-operator__info">
                     <h3>{{ reportOperator.name }}</h3>
                     <p>{{ reportOperator.email }}</p>
@@ -52,9 +52,6 @@
                 series: [{
             name: 'series1',
             data: [31, 40, 28, 51, 42, 109, 100]
-          }, {
-            name: 'series2',
-            data: [11, 32, 45, 32, 34, 52, 41]
           }],
           chartOptions: {
             chart: {
