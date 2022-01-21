@@ -1,12 +1,16 @@
 <template>
     <div class="operator-page">
-        <h2>Operator</h2>
+        <AdminTop />
     </div>
 </template>
 
 <script>
+    import AdminTop from '../components/Admin/AdminTop.vue'
     export default {
-        name:"Operator"
+        name:"Operator",
+        components:{
+            AdminTop
+        }
     }
 </script>
 

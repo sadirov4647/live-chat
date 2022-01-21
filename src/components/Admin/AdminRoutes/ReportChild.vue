@@ -27,9 +27,11 @@
             <BaseCard title="Xabarlar soni" :count="reportOperator.messages" />
             <BaseCard title="O'rtacha aktivlik" :count="reportOperator.active" />
         </div>
-       <div id="chart">
-        <apexchart type="area" height="350" :options="chartOptions" :series="series"></apexchart>
-      </div>
+
+
+        <div id="chart">
+            <apexchart type="area" height="350" :options="chartOptions" :series="series"></apexchart>
+          </div>
     </div>
 </template>
 
@@ -43,11 +45,11 @@
         props:['id'],
         components:{
             BaseCard,
-            apexchart: VueApexCharts,
+
         },
         data(){
-            return{
-                 series: [{
+            return {
+                series: [{
             name: 'series1',
             data: [31, 40, 28, 51, 42, 109, 100]
           }, {

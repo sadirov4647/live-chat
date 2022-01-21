@@ -55,7 +55,7 @@ const routes = [
       {
         path:'bot-settings',
         name:'BotSettings',
-        component:() => import('../components/Admin/AdminRoutes/BotSettings.vue')
+        component:() => import('../components/Admin/AdminRoutes/BotSettings/BotSettings.vue')
       },
     ]
   },
