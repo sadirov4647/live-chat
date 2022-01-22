@@ -163,12 +163,23 @@
     .bot-info{
         max-width: 600px;
         display: flex;
-         flex-direction: column;
+        flex-direction: column;
     }
     .bot-info__header{
-    display: flex;
-    justify-content: space-between;
-}
+        display: flex;
+        justify-content: space-between;
+    }
+    .bot-info__header h4{
+        color: #A9A9A9;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+    .bot-info textarea{
+        padding: 20px;
+        outline: none;
+        box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.06);
+        border-radius: 12px;
+    }
     .bot-info-features{
         display: flex;
         align-items: center;

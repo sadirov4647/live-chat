@@ -41,9 +41,7 @@
             },
             removeOperator(){
                 axios.delete(`http://localhost:3000/operators/${this.operator.id}`)
-                .then(response => {
-                    console.log(response.data)
-                })
+               .then(this.isModal = !this.isModal)
 
             }
         }

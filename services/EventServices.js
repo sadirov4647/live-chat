@@ -10,8 +10,8 @@ const apiClient = axios.create({
 })
 
 export default {
-    getOperators(){
-        return apiClient.get('/operators')
+    getOperators(page, perPage){
+        return apiClient.get(`/operators?_page=${page}&_limit=${perPage}`)
     },
     getOperatorId(id){
         return apiClient.get(`/operators/${id}`)
