@@ -32,6 +32,16 @@ const routes = [
         component:() => import('../components/Admin/AdminRoutes/MainPage.vue')
       },
       {
+        path:'personal-settings',
+        name:'PersonalSettings',
+        component:() => import('../components/Admin/AdminRoutes/PersonalSettings.vue')
+      },
+      {
+        path:'change-password',
+        name:'ChangePassword',
+        component:() => import('../components/Admin/AdminRoutes/ChangePassword.vue')
+      },
+      {
         path:'report',
         name:'Report',
         component:() => import('../components/Admin/AdminRoutes/Report.vue')
@@ -56,6 +66,11 @@ const routes = [
         path:'bot-settings',
         name:'BotSettings',
         component:() => import('../components/Admin/AdminRoutes/BotSettings/BotSettings.vue')
+      },
+      {
+        path:'bot-comments',
+        name:'BotComments',
+        component:() => import('../components/Admin/AdminRoutes/BotSettings/BotComments.vue')
       },
     ]
   },

@@ -20,6 +20,10 @@
             <img :src="settingsBot" alt="" width="40" height="40">
             <p>Bot sozlamasi</p>
         </router-link>
+        <hr>
+        <router-link class="admin-nav__links personal-page" :to="{name:'PersonalSettings'}">
+            <p>Shaxsiy sozlamalar</p>
+        </router-link>
     </div>
 </template>
 
@@ -40,6 +44,12 @@
 </script>
 
 <style scoped>
+    .personal-page{
+        align-self: center;
+    }
+    hr{
+        width: 100%;
+    }
     .admin-nav{
         max-width: 300px;
         width: 100%;

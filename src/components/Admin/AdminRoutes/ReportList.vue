@@ -64,4 +64,17 @@
         color: #565656;
         line-height: 22px;
     }
+    @media screen and (max-width:570px) {
+        .report-operator__image{
+            margin-right: 20px;
+        }
+        .report-operator__wrapper h3{
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .remove-btn img{
+            width: 18px;
+            height: 18px;
+        }
+    }
 </style>

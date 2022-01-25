@@ -9,7 +9,18 @@
             <button><img :src="warningIcon" alt="warning" width="28" height="28"></button>
             <button><img :src="questionIcon" alt="question" width="28" height="28"></button>
             <button class="admin-top__settings"><img :src="settingsIcon" alt="setting" width="28" height="28"></button>
-            <button><img :src="userIcon" alt="setting" width="42" height="42"></button>
+            <button class="amin-top__user"><img :src="userIcon" alt="setting" width="42" height="42"></button>
+            <ul>
+                <li class="main-top-user__item user-icon">
+                    <p>Shaxsiy xonaga o'tish</p>
+                </li>
+                <li class="main-top-user__item">
+                    <p>Parolni o'zgartirish</p>
+                </li>
+                <li class="main-top-user__item">
+                    <p>Saytdan chiqish</p>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -35,6 +46,21 @@
 </script>
 
 <style scoped>
+    .main-top-user__item{
+        display: flex;
+        align-items: center;
+    }
+    .main-top-user__item:hover{
+        background-color: #F6F6F6;
+    }
+    .main-top-user__item::before{
+        content: "";
+        width: 18px;
+        height: 18px;
+    }
+    .user-icon::before{
+        background: url(../../assets/images/user-icon.svg);
+    }
     .admin-top{
         display: flex;
         align-items: center;

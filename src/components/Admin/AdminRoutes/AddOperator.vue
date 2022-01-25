@@ -32,8 +32,8 @@
     }
     .add-operator h2{
         font-weight: bold;
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 24px;
+        line-height: 32px;
         color: #2262C6;
         text-align: left;
         margin: 0;

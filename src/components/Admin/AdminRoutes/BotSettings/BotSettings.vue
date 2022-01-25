@@ -1,12 +1,12 @@
 <template>
-    <!-- <div class="bot-settings__modal">
+    <div v-if="isBotModal" class="bot-settings__modal">
         <div class="upload-bot__image">
             <input class="upload-input" type="file">
             <p class="upload-bot__para">rasmni shu yerga tashlang</p>
         </div>
         <p>yoki</p>
         <button class="upload-image__btn">Rasmni tanlang</button>
-    </div> -->
+    </div>
 
     <div class="bot-settings">
         <h2 class="bot-settings__title">Bot sozlamalari</h2>
@@ -19,7 +19,7 @@
                 <div class="bot-main-profile__features">
                     <div class="bot-main__profile-title">
                         <h4>Live Q chat</h4>
-                        <button class="bot-edit__title">
+                        <button class="bot-edit__title" @click="uploadImage">
                             <img :src="bigEdit" alt="edit bot title" width="18" height="18">
                         </button>
                     </div>
@@ -34,7 +34,17 @@
                         <button><img :src="questionImage" alt="" width="16" height="16"></button>
                     </div>
                 </div>
-                <textarea name="bot-info" id="" cols="10" rows="5"></textarea>
+                <textarea name="user-text" id="user-text" cols="10" rows="5"></textarea>
+            </div>
+            <div class="bot-info">
+                <div class="bot-info__header">
+                    <h4>Bot haqida ma'lumot beruvchi matn</h4>
+                    <div class="bot-info-features">
+                        <button><img :src="bigEdit" alt="" width="16" height="16"></button>
+                        <button><img :src="questionImage" alt="" width="16" height="16"></button>
+                    </div>
+                </div>
+                <textarea name="first-messages-from-bot" id="first-messages-from-bot" cols="10" rows="5"></textarea>
             </div>
         </div>
     </div>
@@ -63,8 +73,13 @@
 </script>
 
 <style scoped>
+    .bot-settings{
+        flex-grow: 1;
+        padding: 40px;
+    }
     .bot-settings__modal {
-        position: absolute;
+        position: fixed;
+        left: 35%;
         padding: 50px 80px;
         background: #FFFFFF;
         border: 1px solid #F0F0F0;
@@ -115,15 +130,16 @@
         margin: 0;
         color: #2262C6;
         font-weight: bold;
-        font-size: 32px;
-        line-height: 48px;
+        font-size: 24px;
+        line-height: 32px;
     }
     .bot-main__profile{
         display: flex;
         justify-content: center;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .bot-profile__image{
+        padding: 0;
         border: none;
         background-color: inherit;
         display: flex;
@@ -164,6 +180,7 @@
         max-width: 600px;
         display: flex;
         flex-direction: column;
+        margin-bottom: 24px;
     }
     .bot-info__header{
         display: flex;
@@ -179,9 +196,16 @@
         outline: none;
         box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.06);
         border-radius: 12px;
+        border: 1px solid #EAEAEA;
     }
     .bot-info-features{
         display: flex;
         align-items: center;
+    }
+    .bot-info-features button{
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+        opacity: 0.5;
     }
 </style>
