@@ -72,6 +72,9 @@
             font-size: 15px;
             line-height: 20px;
         }
+        .report-operator__wrapper p{
+            font-size: 16px;
+        }
         .remove-btn img{
             width: 18px;
             height: 18px;

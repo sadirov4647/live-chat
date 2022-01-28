@@ -81,6 +81,8 @@
 <style scoped>
     .report-operator__list{
         list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
     .report-title{
         color: #2262C6;
@@ -96,6 +98,8 @@
     .choose-operator__title{
         color: #CBCBCB;
         text-align: center;
+        line-height: 34px;
+    font-size: 24px;
     }
     .pagination{
         list-style-type: none;

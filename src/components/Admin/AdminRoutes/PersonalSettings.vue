@@ -39,7 +39,7 @@
     }
     .personal-settings__title::before{
         content: '';
-        background: url(../../../assets/images/personalSettings.svg);
+        background: url(../../../assets/images/settingsbot.png);
         width: 56px;
         height: 50px;
         margin-right: 30px;

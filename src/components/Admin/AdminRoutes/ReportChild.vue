@@ -179,7 +179,7 @@
             align-items: center;
         }
         .reportchild-operator__wrapper h3{
-            font-size: 15px;
+            font-size: 14px;
             line-height: 20px;
         }
     }

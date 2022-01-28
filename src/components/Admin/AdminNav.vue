@@ -1,9 +1,5 @@
 <template>
     <div class="admin-nav">
-        <router-link class="admin-nav__links chat" :to="{name:'Chat'}">
-            <p class="chat-title">chat</p>
-            <p>Chatga o'tish</p>
-        </router-link>
         <router-link class="admin-nav__links active" :to="{name:'Main'}">
             <img :src="mainPageImage" alt="main image" width="40" height="40">
             <p>Asosiy sahifa</p>

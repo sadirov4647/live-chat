@@ -41,7 +41,7 @@
             },
             removeOperator(){
                 axios.delete(`http://localhost:3000/operators/${this.operator.id}`)
-               .then(this.isModal = !this.isModal)
+                .then(this.isModal = !this.isModal)
 
             }
         }
@@ -136,6 +136,25 @@
     @media screen and (max-width:550px) {
         .operator-image{
             margin-right: 20px;
+        }
+        .remove-btn img{
+            width: 12px;
+            height: 12px;
+        }
+        .operator-title{
+            font-size: 12px;
+            line-height: 21px;
+        }
+        .operator-email{
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .operator-item{
+            padding: 10px 20px;
+        }
+        .operator-image{
+            width: 45px;
+            height: 45px;
         }
     }
 </style>

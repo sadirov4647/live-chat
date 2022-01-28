@@ -1,23 +1,25 @@
 <template>
     <div class="admin-top">
-        <img class="main-logo" :src="mainLogo" alt="main logo" width="300" height="72">
+        <router-link to="/">
+            <img class="main-logo" :src="mainLogo" alt="main logo" width="300" height="72">
+        </router-link>
         <div class="admin-top__input">
             <label for="search"></label>
             <input type="search" placeholder="izlash">
         </div>
         <div class="admin-top__features">
-            <button><img :src="warningIcon" alt="warning" width="28" height="28"></button>
-            <button><img :src="questionIcon" alt="question" width="28" height="28"></button>
+            <button class="admin-top__question"><img :src="warningIcon" alt="warning" width="28" height="28"></button>
+            <button class="admin-top__warn"><img :src="questionIcon" alt="question" width="28" height="28"></button>
             <button class="admin-top__settings"><img :src="settingsIcon" alt="setting" width="28" height="28"></button>
-            <button class="amin-top__user"><img :src="userIcon" alt="setting" width="42" height="42"></button>
-            <ul>
+            <button class="admin-top__user" @click="userModal"><img :src="userIcon" alt="setting" width="42" height="42"></button>
+            <ul class="main-top-user__list">
                 <li class="main-top-user__item user-icon">
                     <p>Shaxsiy xonaga o'tish</p>
                 </li>
-                <li class="main-top-user__item">
+                <li class="main-top-user__item user-password__change">
                     <p>Parolni o'zgartirish</p>
                 </li>
-                <li class="main-top-user__item">
+                <li class="main-top-user__item user-logout">
                     <p>Saytdan chiqish</p>
                 </li>
             </ul>
@@ -39,7 +41,14 @@
                 warningIcon:WarningIcon,
                 questionIcon:QuestionIcon,
                 settingsIcon:SettingsIcon,
-                userIcon:UserIcon
+                userIcon:UserIcon,
+                userModall:false
+            }
+        },
+        methods:{
+            userModal(){
+                let ok = document.querySelector('.main-top-user__list');
+                ok.style.transform = "translateX(0px)"
             }
         }
     }
@@ -57,9 +66,27 @@
         content: "";
         width: 18px;
         height: 18px;
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+    }
+    .main-top-user__item p::after{
+        content: "";
+        background-color: #F7F7F7;
+        width: 100%;
+        height: 1px;
+        display: flex;
+        flex-direction: column;
     }
     .user-icon::before{
         background: url(../../assets/images/user-icon.svg);
+    }
+    .user-password__change::before{
+        background: url(../../assets/images/change-password.svg);
+    }
+    .user-logout{
+        background: url(../../assets/images/logout.svg);
+        background-repeat: no-repeat;
     }
     .admin-top{
         display: flex;
@@ -92,6 +119,9 @@
         outline: none;
         width: 100%;
     }
+    .admin-top__user{
+        position: relative;
+    }
     .admin-top__features{
         display: flex;
         align-items: center;
@@ -100,6 +130,27 @@
         border: none;
         cursor: pointer;
         background-color: #fff;
+    }
+    .main-top-user__list{
+        top: 80px;
+        z-index: 99;
+        transform: translateX(-1300px);
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 5%;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+        transition: 0.3s;
+    }
+    .main-top-user__item p{
+        margin: 0;
+        white-space: nowrap;
+        color: #6D6D6D;
     }
 
     @media screen and (max-width:970px) {
@@ -126,4 +177,32 @@
         }
     }
 
+    @media screen and (max-width:570px) {
+        .admin-top__input::before{
+            display: none;
+        }
+        .admin-top__input{
+            padding: 5px 7px;
+        }
+        .main-logo{
+            width: 150px;
+        }
+        .admin-top__user img{
+            width: 30px;
+            height: 30px;
+        }
+        .admin-top__warn img{
+            width: 20px;
+            height: 20px;
+        }
+        .admin-top__question img{
+            width: 20px;
+            height: 20px;
+        }
+        .admin-top{
+            padding-left: 20px;
+            padding-right: 30px;
+            padding-top: 5px;
+        }
+    }
 </style>

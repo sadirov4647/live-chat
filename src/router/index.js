@@ -22,11 +22,6 @@ const routes = [
     props:true,
     children:[
       {
-        path:'chat',
-        name:'Chat',
-        component:() => import('../components/Admin/AdminRoutes/Chat.vue')
-      },
-      {
         path:'main-page',
         name:'Main',
         component:() => import('../components/Admin/AdminRoutes/MainPage.vue')
@@ -77,8 +72,16 @@ const routes = [
   {
     path:'/operator',
     name:"Operator",
-    component:Operator
-  }
+    component:Operator,
+    children:[
+      {
+        path:"operator/:id",
+        name:"Chatter",
+        component:()=> import('../components/Operator/Chatter'),
+        props:true
+      }
+    ]
+  },
 ];
 
 const router = createRouter({

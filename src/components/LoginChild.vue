@@ -15,6 +15,7 @@
 </template>
 
 <script>
+    import EventService from '../../services/EventServices'
     export default {
         name:"LoginChild",
         data(){
@@ -22,17 +23,21 @@
                 email:'',
                 password:'',
                 wrong:false,
+                operators:[],
+                operatorPass:[]
             }
         },
         methods:{
             checkLogin(){
+                this.operatorPass = this.operators.forEach(item => {
+                    if(this.email === 'operator' && this.password === item.userpassword){
+                        this.$router.push('/operator')
+                        localStorage.setItem('successpass', item.id)
+                    }
+                })
                 if(this.email === 'admin' && this.password === '123'){
                     this.$router.push('/admin-bot')
                 }
-                if(this.email === 'operator' && this.password === '010203'){
-                    this.$router.push('/operator')
-                }
-
                 else{
                     this.wrong = !this.wrong
                     setTimeout(() => {
@@ -40,6 +45,12 @@
                     },1000)
                 }
             }
+        },
+        created(){
+            EventService.getOperator()
+            .then(response => {
+                this.operators = response.data
+            })
         }
     }
 </script>

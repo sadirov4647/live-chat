@@ -7,7 +7,37 @@
       "talking": "17",
       "messages": "689",
       "active": "0.6",
-      "user-password":"1111111111"
+      "userpassword":"1111111111",
+      "chatted":[
+        {
+          "id":1,
+          "chattedName":"Selena Gomez",
+          "chattedText":"Assalomu alaykum...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+        },
+        {
+          "id":2,
+          "chattedName":"Bharat",
+          "chattedText":"Assalomu alaykum...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+        },
+        {
+          "id":3,
+          "chattedName":"Angelina Jolie",
+          "chattedText":"Hello...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+        },
+        {
+          "id":4,
+          "chattedName":"Selena Gomez",
+          "chattedText":"Assalomu alaykum...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+        }
+      ]
     },
     {
       "id": 2,
@@ -16,25 +46,58 @@
       "talking": "36",
       "messages": "532",
       "active": "0.8",
-      "user-password":"2222222222"
-    },
-    {
-      "id": 3,
-      "name": "Elena Tatyana",
-      "email": "@elena",
-      "talking": "22",
-      "messages": "927",
-      "active": "0.4",
-      "user-password":"3333333333"
-    },
-    {
-      "id": 4,
-      "name": "Izzatillo Sadirov",
-      "email": "@sadirovizzatillo3",
-      "talking": "19",
-      "messages": "676",
-      "active": "1.7",
-      "user-password":"5555555555"
-    }
-  ]
-}
+      "userpassword":"2222222222",
+      "chatted":[{
+        "chattedName":"Selena Gomez",
+        "chattedText":"Assalomu alaykum...",
+        "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+        "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+        }]
+      },
+      {
+        "id": 3,
+        "name": "Elena Tatyana",
+        "email": "@elena",
+        "talking": "22",
+        "messages": "927",
+        "active": "0.4",
+        "userpassword":"3333333333",
+        "chatted":[{
+          "chattedName":"Selena Gomez",
+          "chattedText":"Assalomu alaykum...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+          }]
+        },
+        {
+          "id": 4,
+          "name": "Izzatillo Sadirov",
+          "email": "@sadirovizzatillo3",
+          "talking": "19",
+          "messages": "676",
+          "active": "1.7",
+          "userpassword":"5555555555",
+          "chatted":[{
+            "chattedName":"Selena Gomez",
+            "chattedText":"Assalomu alaykum...",
+            "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+            "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+            }]
+          },
+          {
+            "id": 5,
+            "name": "Jhon Doe",
+            "email": "@sadirovizzatillo3",
+            "talking": "19",
+            "messages": "676",
+            "active": "1.7",
+            "userpassword":"6666666666",
+            "chatted":[{
+              "chattedName":"Selena Gomez",
+              "chattedText":"Assalomu alaykum...",
+              "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+              "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+              }]
+            }
+          ]
+        }
