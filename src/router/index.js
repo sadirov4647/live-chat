@@ -75,10 +75,15 @@ const routes = [
     component:Operator,
     children:[
       {
-        path:"operator/:id",
+        path:":id",
         name:"Chatter",
         component:()=> import('../components/Operator/Chatter'),
         props:true
+      },
+      {
+        path:"/user-info",
+        name:"User-info",
+        component:() => import('../components/')
       }
     ]
   },

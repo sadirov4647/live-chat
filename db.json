@@ -21,21 +21,21 @@
           "chattedName":"Bharat",
           "chattedText":"Assalomu alaykum...",
           "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
-          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+          "answer":["V.A ho'sh indan keyinchi?!"]
         },
         {
           "id":3,
           "chattedName":"Angelina Jolie",
           "chattedText":"Hello...",
           "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
-          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+          "answer":["V.A nima deysan gapir tezroq"]
         },
         {
           "id":4,
           "chattedName":"Selena Gomez",
           "chattedText":"Assalomu alaykum...",
           "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
-          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+          "answer":["V.A marhamat nima xizmat?"]
         }
       ]
     },
@@ -47,12 +47,36 @@
       "messages": "532",
       "active": "0.8",
       "userpassword":"2222222222",
-      "chatted":[{
-        "chattedName":"Selena Gomez",
-        "chattedText":"Assalomu alaykum...",
-        "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
-        "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
-        }]
+      "chatted":[
+        {
+          "id":1,
+          "chattedName":"Selena Gomez",
+          "chattedText":"Assalomu alaykum...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+        },
+        {
+          "id":2,
+          "chattedName":"Bharat",
+          "chattedText":"Assalomu alaykum...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+        },
+        {
+          "id":3,
+          "chattedName":"Angelina Jolie",
+          "chattedText":"Hello...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A nima gap"]
+        },
+        {
+          "id":4,
+          "chattedName":"Selena Gomez",
+          "chattedText":"Assalomu alaykum...",
+          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+          "answer":["V.A ho'p so'ylang."]
+        }
+      ]
       },
       {
         "id": 3,
@@ -62,12 +86,36 @@
         "messages": "927",
         "active": "0.4",
         "userpassword":"3333333333",
-        "chatted":[{
-          "chattedName":"Selena Gomez",
-          "chattedText":"Assalomu alaykum...",
-          "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
-          "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
-          }]
+        "chatted":[
+          {
+            "id":1,
+            "chattedName":"Selena Gomez",
+            "chattedText":"Assalomu alaykum...",
+            "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+            "answer":["V.A gapiring."]
+          },
+          {
+            "id":2,
+            "chattedName":"Bharat",
+            "chattedText":"Assalomu alaykum...",
+            "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+            "answer":["V.A o'zingizni tanishtiring."]
+          },
+          {
+            "id":3,
+            "chattedName":"Angelina Jolie",
+            "chattedText":"Hello...",
+            "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+            "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+          },
+          {
+            "id":4,
+            "chattedName":"Selena Gomez",
+            "chattedText":"Assalomu alaykum...",
+            "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+            "answer":["V.A nima deysiz."]
+          }
+        ]
         },
         {
           "id": 4,
@@ -76,13 +124,37 @@
           "talking": "19",
           "messages": "676",
           "active": "1.7",
-          "userpassword":"5555555555",
-          "chatted":[{
-            "chattedName":"Selena Gomez",
-            "chattedText":"Assalomu alaykum...",
-            "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
-            "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
-            }]
+          "userpassword":"444444444",
+          "chatted":[
+            {
+              "id":1,
+              "chattedName":"Selena Gomez",
+              "chattedText":"Assalomu alaykum...",
+              "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+              "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+            },
+            {
+              "id":2,
+              "chattedName":"Bharat",
+              "chattedText":"Assalomu alaykum...",
+              "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+              "answer":["V.A qachon yozgandiz."]
+            },
+            {
+              "id":3,
+              "chattedName":"Angelina Jolie",
+              "chattedText":"Hello...",
+              "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+              "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+            },
+            {
+              "id":4,
+              "chattedName":"Selena Gomez",
+              "chattedText":"Assalomu alaykum...",
+              "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+              "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+            }
+          ]
           },
           {
             "id": 5,
@@ -91,13 +163,37 @@
             "talking": "19",
             "messages": "676",
             "active": "1.7",
-            "userpassword":"6666666666",
-            "chatted":[{
-              "chattedName":"Selena Gomez",
-              "chattedText":"Assalomu alaykum...",
-              "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
-              "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
-              }]
+            "userpassword":"5555555555",
+            "chatted":[
+              {
+                "id":1,
+                "chattedName":"Selena Gomez",
+                "chattedText":"Assalomu alaykum...",
+                "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+                "answer":["V.A bo'lishi mumkin emas."]
+              },
+              {
+                "id":2,
+                "chattedName":"Bharat",
+                "chattedText":"Assalomu alaykum...",
+                "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+                "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+              },
+              {
+                "id":3,
+                "chattedName":"Angelina Jolie",
+                "chattedText":"Hello...",
+                "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+                "answer":["V.A yaxshi yasxsihi."]
+              },
+              {
+                "id":4,
+                "chattedName":"Selena Gomez",
+                "chattedText":"Assalomu alaykum...",
+                "chattedRealText":"Assalomu alaykum, bir savolim bor edi...",
+                "answer":["V.A marhamat savollaringizni yo`llashingiz mumkin."]
+              }
+            ]
             }
           ]
         }

@@ -18,5 +18,5 @@ export default {
     },
     getOperator(){
         return apiClient.get(`/operators`)
-    }
+    },
 }

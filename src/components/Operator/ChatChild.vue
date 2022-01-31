@@ -1,6 +1,6 @@
 <template>
     <li class="chat-item">
-        <router-link :to="{name:'Chatter', params:{id: chat.id }}">
+        <router-link :to="{name:'Chatter', params:{ id: chat.id }}">
             <img :src="chatimage" alt="chat user image" width="40" height="40">
             <div class="chat-item__wrapper">
                 <h5>{{ chat.chattedName }}</h5>
