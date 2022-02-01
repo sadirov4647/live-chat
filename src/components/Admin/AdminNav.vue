@@ -96,11 +96,17 @@
         }
         .admin-nav{
             align-items: center;
-            max-width: 100px;
+            max-width: 90px;
         }
         .active{
             max-width: 50px;
             width: 100%;
+        }
+    }
+    @media screen and (max-width:520px) {
+        .admin-nav{
+            transform: translateX(-600px);
+            position: fixed;
         }
     }
 </style>

@@ -82,6 +82,9 @@
     .main-top h2{
         margin: 0;
         color: #2262C6;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
     }
     .main-top select{
         outline: none;
@@ -106,6 +109,8 @@
     }
     .main-infos__counts-wrapper{
         background-color: #B1D0FF;
+        border-radius: 6px;
+        padding: 16px;
     }
     .main-infos__wrapper h5{
         margin: 0;
@@ -151,6 +156,10 @@
         }
         .main-infos__counts{
             grid-template-columns: 1fr;
+        }
+        .main-top h2{
+            font-size: 18px;
+            line-height: 26px;
         }
     }
 </style>

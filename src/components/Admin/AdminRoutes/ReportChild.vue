@@ -102,7 +102,7 @@
         font-weight: bold;
         font-size: 40px;
         line-height: 52px;
-        margin-bottom: 0;
+        margin: 0;
     }
     hr{
         opacity: 0.5;
@@ -173,14 +173,38 @@
             grid-template-columns: 1fr 1fr;
         }
     }
+    @media screen and (max-width:800px) {
+        .reportchild h2{
+            font-size: 30px;
+            line-height: 42px;
+        }
+    }
     @media screen and (max-width:570px) {
         .report-date__info{
             grid-template-columns: 1fr;
             align-items: center;
         }
         .reportchild-operator__wrapper h3{
-            font-size: 14px;
+            font-size: 18px;
             line-height: 20px;
+        }
+        .reportchild h2{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .reportchild{
+            padding: 20px;
+        }
+        .choose-report__date-title{
+            font-size: 18px;
+            line-height: 22px;
+        }
+        .reportchild-operator__wrapper img{
+            width: 80px;
+            height: 80px;
+        }
+        .reportchild-operator__info{
+            margin-left: 15px;
         }
     }
 </style>

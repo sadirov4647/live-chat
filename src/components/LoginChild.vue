@@ -104,4 +104,31 @@
         height: 19px;
         margin-right: 16px;
     }
+
+    @media screen and (max-width:900px) {
+        .login-features{
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .login-features{
+            max-width: 220px;
+        }
+        .login-features__inputs input{
+            width: 260px;
+        }
+        .login-features__title{
+            display: flex;
+            flex-direction: column;
+        }
+        .login-features__title::before{
+            content: "";
+            background: url(../assets/images/loginlogo.png);
+            width: 264px;
+            height: 84px;
+        }
+    }
 </style>

@@ -2,26 +2,27 @@
     <div class="bot-comments">
         <h2>Bot izoh maydoni uchun matn</h2>
         <hr>
-        <ul class="bot-comments__list">
-            <li class="bot-comments__item">
-                <h4>O'zbek tilidagi matn</h4>
-                <textarea name="comments-text-uz" id="comments-text-uz" cols="10" rows="5"></textarea>
+        <BotTextAreas title="O'zbek tilidagi matn" input="uzb-text"/>
+        <BotTextAreas title="Rus tilidagi matn" input="rus-text"/>
+        <BotTextAreas title="English tilidagi matn" input="en-text"/>
+        <ul class="bot-textareas__features-list">
+            <li class="bot-textareas__features-list">
+                <button class="bot-cancel">Bekor qilish</button>
             </li>
-            <li class="bot-comments__item">
-                <h4>Rus tilidagi matn</h4>
-                <textarea name="comments-text-rus" id="comments-text-rus" cols="10" rows="5"></textarea>
-            </li>
-            <li class="bot-comments__item">
-                <h4>English tilidagi matn</h4>
-                <textarea name="comments-text-en" id="comments-text-en" cols="10" rows="5"></textarea>
+            <li class="bot-textareas__features-list">
+                <button class="bot-save">Saqlash</button>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
+    import BotTextAreas from './BotTextAreas.vue'
     export default {
         name: "BotComments",
+        components:{
+            BotTextAreas
+        }
     };
 </script>
 
@@ -62,5 +63,32 @@
         outline: none;
         padding: 20px;
         color: #979797;
+    }
+    .bot-textareas__features-list{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .bot-textareas__features-list button{
+        border: none;
+        padding: 16px 32px;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+    .bot-cancel{
+        background-color: #E7E7E7;
+        margin-right: 20px;
+    }
+    .bot-save{
+        background-color: #2262C6;
+        color: #ffffff;
+    }
+
+    @media screen  and (max-width:500px){
+        .bot-textareas__features-list button{
+            padding: 10px 22px;
+        }
     }
 </style>

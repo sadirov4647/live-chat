@@ -1,5 +1,8 @@
 <template>
     <div class="admin-top">
+        <button class="menu-real__btn">
+          <img class="menu-btn" :src="menubtn" alt="menu" width="35" height="35">
+        </button>
         <router-link to="/">
             <img class="main-logo" :src="mainLogo" alt="main logo" width="300" height="72">
         </router-link>
@@ -28,6 +31,7 @@
 </template>
 
 <script>
+    import MenuBtn from  '../../assets/images/menu.svg'
     import MainLogo from '../../assets/images/mainlogo.png'
     import WarningIcon from '../../assets/images/mainimages/warnicon.png'
     import QuestionIcon from '../../assets/images/mainimages/questionicon.png'
@@ -42,6 +46,7 @@
                 questionIcon:QuestionIcon,
                 settingsIcon:SettingsIcon,
                 userIcon:UserIcon,
+                menubtn:MenuBtn,
                 userModall:false
             }
         },
@@ -118,6 +123,12 @@
         background: inherit;
         outline: none;
         width: 100%;
+    }
+    .menu-real__btn{
+        display: none;
+        border: none;
+        cursor: pointer;
+        background-color: inherit;
     }
     .admin-top__user{
         position: relative;
@@ -203,6 +214,22 @@
             padding-left: 20px;
             padding-right: 30px;
             padding-top: 5px;
+        }
+    }
+    @media screen and (max-width:570px) {
+        .admin-top__warn{
+            display: none;
+        }
+        .admin-top__question{
+            display: none;
+        }
+        .admin-top__input{
+            display: none;
+        }
+    }
+    @media screen and (max-width:520px) {
+        .menu-real__btn{
+            display: block;
         }
     }
 </style>

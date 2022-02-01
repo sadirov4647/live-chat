@@ -19,9 +19,9 @@
                 <div class="bot-main-profile__features">
                     <div class="bot-main__profile-title">
                         <h4>Live Q chat</h4>
-                        <button class="bot-edit__title" @click="uploadImage">
+                        <router-link :to="{name:'BotComments'}" class="bot-edit__title">
                             <img :src="bigEdit" alt="edit bot title" width="18" height="18">
-                        </button>
+                        </router-link>
                     </div>
                     <textarea class="bot-description" name="description" cols="10" rows="5"></textarea>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="bot-info__header">
                     <h4>Bot haqida ma'lumot beruvchi matn</h4>
                     <div class="bot-info-features">
-                        <button><img :src="bigEdit" alt="" width="16" height="16"></button>
+                        <router-link :to="{name:'ChangeDescription'}"><img :src="bigEdit" alt="" width="16" height="16"></router-link>
                         <button><img :src="questionImage" alt="" width="16" height="16"></button>
                     </div>
                 </div>
@@ -38,9 +38,9 @@
             </div>
             <div class="bot-info">
                 <div class="bot-info__header">
-                    <h4>Bot haqida ma'lumot beruvchi matn</h4>
+                    <h4>Bot tomonidan boradigan birinchi xabar</h4>
                     <div class="bot-info-features">
-                        <button><img :src="bigEdit" alt="" width="16" height="16"></button>
+                        <router-link :to="{name:'BotFirstText'}"><img :src="bigEdit" alt="" width="16" height="16"></router-link>
                         <button><img :src="questionImage" alt="" width="16" height="16"></button>
                     </div>
                 </div>
@@ -190,6 +190,9 @@
         color: #A9A9A9;
         margin: 0;
         margin-bottom: 16px;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 32px;
     }
     .bot-info textarea{
         padding: 20px;
@@ -207,5 +210,48 @@
         border: none;
         cursor: pointer;
         opacity: 0.5;
+    }
+
+    @media screen and (max-width:600px) {
+        .bot-info__header h4{
+            font-size: 18px;
+            line-height: 22px;
+        }
+        .bot-info__header{
+            align-items: flex-start;
+        }
+        .bot-info textarea{
+            padding: 5px;
+        }
+        .bot-main-profile__features textarea{
+            padding: 5px;
+        }
+        .bot-profile__image img{
+            width: 70px;
+            height: 70px;
+        }
+        .bot-main__profile-title{
+            margin-bottom: 8px;
+        }
+        .bot-main__profile-title h4{
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .bot-settings{
+            padding: 20px;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .bot-info__header h4{
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .bot-settings__title{
+            font-size: 22px;
+            line-height: 28px;
+        }
+        .bot-profile__image{
+            margin-right: 15px;
+        }
     }
 </style>

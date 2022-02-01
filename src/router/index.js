@@ -63,9 +63,19 @@ const routes = [
         component:() => import('../components/Admin/AdminRoutes/BotSettings/BotSettings.vue')
       },
       {
+        path:'bot-description',
+        name:'ChangeDescription',
+        component:() => import('../components/Admin/AdminRoutes/BotSettings/ChangeDescription.vue')
+      },
+      {
         path:'bot-comments',
         name:'BotComments',
         component:() => import('../components/Admin/AdminRoutes/BotSettings/BotComments.vue')
+      },
+      {
+        path:'bot-send',
+        name:'BotFirstText',
+        component:() => import('../components/Admin/AdminRoutes/BotSettings/BotFirstText.vue')
       },
     ]
   },

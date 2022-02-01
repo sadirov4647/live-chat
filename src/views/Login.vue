@@ -37,4 +37,12 @@ export default {
     padding: 230px 90px;
     box-shadow: 0px 4px 147px rgba(0, 0, 0, 0.25);
   }
+  @media screen and (max-width:900px) {
+    .logo-side{
+      display: none;
+    }
+    .login-page{
+      justify-content: center;
+    }
+  }
 </style>
