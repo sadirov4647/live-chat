@@ -81,9 +81,10 @@ const routes = [
         props:true
       },
       {
-        path:"/user-info",
-        name:"User-info",
-        component:() => import('../components/')
+        path:"user-info/:id",
+        name:"UserInfo",
+        component:() => import('../components/Operator/UserInfo.vue'),
+        props:true
       }
     ]
   },

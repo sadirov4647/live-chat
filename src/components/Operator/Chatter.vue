@@ -1,7 +1,7 @@
 <template>
     <div class="chatter" v-if="setId">
         <div class="chatter-user__wrapper">
-            <router-link to="/user-info">
+            <router-link :to="{name:'UserInfo', params:{ id: id }}">
                 <img :src="chatimage" alt="chat user image" width="60" height="60">
             </router-link>
             <p class="chatter-text">{{ setId.chattedRealText }}</p>

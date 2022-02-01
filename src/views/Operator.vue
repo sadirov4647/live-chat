@@ -13,7 +13,11 @@
                     <h2 class="chat-right__title">Yozishmalar ro'yxati</h2>
                     <div class="chat-right__btns">
                         <button><img :src="searchImage" alt="search icon" width="25" height="25"></button>
-                        <button><img :src="userActionImage" alt="user action" width="7" height="30"></button>
+                        <button @click="blackModal"><img :src="userActionImage" alt="user action" width="7" height="30"></button>
+                        <ul v-if="isblackModal" class="black-modal__list">
+                            <li class="black-modal__item black-list">Qora ro'yxatga kiritish</li>
+                            <li class="black-modal__item user-complain">Arz qilish</li>
+                        </ul>
                     </div>
                 </div>
                 <router-view />
@@ -44,7 +48,8 @@
                 searchImage:SearchIcon,
                 userActionImage:UserActionIcon,
                 operator:[],
-                chats:[]
+                chats:[],
+                isblackModal:false
             }
         },
         created(){
@@ -54,6 +59,11 @@
                 this.operator = response.data
                 this.chats = response.data.chatted
             })
+        },
+        methods:{
+            blackModal(){
+                this.isblackModal = !this.isblackModal
+            }
         }
     }
 </script>
@@ -102,5 +112,41 @@
     }
     .chat-right__btns button:not(:last-child){
         margin-right: 40px;
+    }
+    .black-modal__list{
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        right: 10%;
+        top: 25%;
+        z-index: 99;
+    }
+    .black-modal__item{
+        padding: 5px 15px;
+        background-color: #F7F7F7;
+        border: 1px solid #E7E7E7;
+        color: #6D6D6D;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .black-modal__item::before{
+        content: "";
+        width: 20px;
+        height: 18px;
+        margin-right: 18px;
+    }
+    .black-list::before{
+        background: url(../assets/images/blacklist.svg);
+    }
+    .user-complain::before{
+        background: url(../assets/images/complain.svg);
+        background-repeat: no-repeat;
     }
 </style>
