@@ -2,11 +2,14 @@
     <div class="main">
         <div class="main-top">
             <h2>Asosiy sahifa</h2>
-            <select name="date-select" id="date-select">
-                <option value="kunlik">Kunlik</option>
-                <option value="haftalik">Haftalik</option>
-                <option value="oylik">Oylik</option>
-            </select>
+
+            <label for="data"></label>
+            <input list="dataselect" name="data" id="data" v-model="date" placeholder="Kunlik">
+            <datalist id="dataselect">
+              <option value="Kunlik" selected></option>
+              <option value="Haftalik"></option>
+              <option value="Oylik"></option>
+            </datalist>
         </div>
         <div class="main-charts">
             <div>
@@ -50,6 +53,7 @@
         },
         data(){
             return{
+                date:'',
                 series: [75,25],
                 chartOptions: {
                     chart: {
@@ -69,7 +73,7 @@
                     }]
                 },
             }
-        }
+        },
     }
 </script>
 
@@ -86,11 +90,11 @@
         font-size: 26px;
         line-height: 32px;
     }
-    .main-top select{
+    .main-top input{
         outline: none;
         border: 1px solid #CDCDCD;
         border-radius: 12px;
-        padding: 8px;
+        padding: 8px 20px;
     }
     .main{
         display: flex;
@@ -123,6 +127,9 @@
         border-radius: 12px;
         border: 1px solid #efefef;
         filter: drop-shadow(0px 0px 21px rgba(177, 208, 255, 0.7));
+    }
+    #date-select option{
+        border: 1px solid #a18080 !important;
     }
     .main-infos span{
         color: #2262C6;

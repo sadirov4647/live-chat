@@ -103,6 +103,10 @@
         left: 25%;
         top: 100px;
     }
+    .remove-operator__modal p{
+        margin: 0;
+        margin-bottom: 16px;
+    }
     .modal-features{
         display: flex;
         justify-content: center;
@@ -155,6 +159,21 @@
         .operator-image{
             width: 45px;
             height: 45px;
+        }
+        .remove-operator__modal{
+            padding-top: 20px;
+            padding-bottom: 40px;
+            padding-right: 50px;
+            padding-left: 50px;
+            max-width: 252px;
+            top: 160px;
+        }
+        .remove-operator__modal p{
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .modal-features button{
+            padding: 12px 20px;
         }
     }
 </style>

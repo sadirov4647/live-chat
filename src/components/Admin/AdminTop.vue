@@ -1,6 +1,6 @@
 <template>
     <div class="admin-top">
-        <button class="menu-real__btn">
+        <button class="menu-real__btn" @click="menuClick">
           <img class="menu-btn" :src="menubtn" alt="menu" width="35" height="35">
         </button>
         <router-link to="/">
@@ -20,10 +20,14 @@
                     <p>Shaxsiy xonaga o'tish</p>
                 </li>
                 <li class="main-top-user__item user-password__change">
-                    <p>Parolni o'zgartirish</p>
+                    <router-link to="/admin/change-password">
+                      <p>Parolni o'zgartirish</p>
+                    </router-link>
                 </li>
                 <li class="main-top-user__item user-logout">
-                    <p>Saytdan chiqish</p>
+                    <router-link to="/">
+                       <p>Saytdan chiqish</p>
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -51,9 +55,18 @@
             }
         },
         methods:{
+            menuClick(){
+                this.$emit("menuBtn")
+            },
             userModal(){
                 let ok = document.querySelector('.main-top-user__list');
-                ok.style.transform = "translateX(0px)"
+                if(this.userModall){
+                    this.userModall = !this.userModall
+                    ok.style.transform = "translateX(-1300px)"
+                }else{
+                    this.userModall = !this.userModall
+                     ok.style.transform = "translateX(0)"
+                }
             }
         }
     }
@@ -75,13 +88,10 @@
         align-items: center;
         margin-right: 8px;
     }
-    .main-top-user__item p::after{
-        content: "";
-        background-color: #F7F7F7;
-        width: 100%;
-        height: 1px;
-        display: flex;
-        flex-direction: column;
+    .main-top-user__item{
+        padding: 8px 20px;
+        border-bottom: 1px solid #F7F7F7;
+        border-width: 100%;
     }
     .user-icon::before{
         background: url(../../assets/images/user-icon.svg);
@@ -89,7 +99,7 @@
     .user-password__change::before{
         background: url(../../assets/images/change-password.svg);
     }
-    .user-logout{
+    .user-logout::before{
         background: url(../../assets/images/logout.svg);
         background-repeat: no-repeat;
     }
@@ -153,7 +163,6 @@
         display: flex;
         flex-direction: column;
         right: 5%;
-        padding: 10px;
         background-color: #fff;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
         transition: 0.3s;
@@ -162,6 +171,9 @@
         margin: 0;
         white-space: nowrap;
         color: #6D6D6D;
+    }
+    .main-top-user__item a{
+        text-decoration: none;
     }
 
     @media screen and (max-width:970px) {

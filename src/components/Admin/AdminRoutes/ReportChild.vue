@@ -120,6 +120,9 @@
     .reportchild-operator__info{
         margin-left: 60px;
     }
+    .apexcharts-toolbar{
+        display: none;
+    }
     .reportchild-operator__info h3{
         margin: 0;
         margin-bottom: 10px;
@@ -168,6 +171,9 @@
         justify-content: space-between;
         margin-bottom: 45px;
     }
+    .reportchild-operator__info p{
+        font-weight: bold;
+    }
     @media screen and (max-width:1050px) {
         .report-date__info{
             grid-template-columns: 1fr 1fr;
@@ -177,6 +183,11 @@
         .reportchild h2{
             font-size: 30px;
             line-height: 42px;
+        }
+    }
+    @media screen and (max-width:670px) {
+        .reportchild-operator__info{
+            margin-left: 30px;
         }
     }
     @media screen and (max-width:570px) {
@@ -205,6 +216,10 @@
         }
         .reportchild-operator__info{
             margin-left: 15px;
+        }
+        .reportchild-operator__info p{
+            font-size: 15px;
+            line-height: 19px;
         }
     }
 </style>

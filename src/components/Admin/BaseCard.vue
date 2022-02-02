@@ -39,4 +39,18 @@
         line-height: 48px;
         color: #8AB5CB;
     }
+
+    @media screen and (max-width:520px) {
+        .report-date__card{
+            max-width: 200px;
+        }
+        .report-date__title{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .report-date__count{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
 </style>

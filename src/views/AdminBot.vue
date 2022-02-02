@@ -46,6 +46,10 @@
         color: #2262C6;
         margin: 0;
         padding: 16px 0;
+        text-align: center;
+    }
+    .bot-choose:active{
+        background-color: #FBFBFB;
     }
     .bot-choose{
         align-items: center;

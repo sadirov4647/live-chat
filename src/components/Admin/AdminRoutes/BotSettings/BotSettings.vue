@@ -34,7 +34,7 @@
                         <button><img :src="questionImage" alt="" width="16" height="16"></button>
                     </div>
                 </div>
-                <textarea name="user-text" id="user-text" cols="10" rows="5"></textarea>
+                <textarea name="user-text" id="user-text" cols="10" rows="5" disabled></textarea>
             </div>
             <div class="bot-info">
                 <div class="bot-info__header">
@@ -44,7 +44,7 @@
                         <button><img :src="questionImage" alt="" width="16" height="16"></button>
                     </div>
                 </div>
-                <textarea name="first-messages-from-bot" id="first-messages-from-bot" cols="10" rows="5"></textarea>
+                <textarea name="first-messages-from-bot" id="first-messages-from-bot" cols="10" rows="5" disabled></textarea>
             </div>
         </div>
     </div>

@@ -1,8 +1,8 @@
 <template>
     <div class="main-page">
-        <AdminTop/>
+        <AdminTop @menuBtn="buttonClick"/>
         <div class="main-page__bottom">
-            <AdminNav/>
+            <AdminNav :clicked="this.clicked"/>
             <router-view class="routes"></router-view>
         </div>
     </div>
@@ -16,6 +16,16 @@
         components:{
             AdminNav,
             AdminTop
+        },
+        data(){
+            return{
+                clicked:false
+            }
+        },
+        methods:{
+            buttonClick(){
+                this.clicked = !this.clicked
+            }
         }
     }
 </script>
@@ -45,5 +55,6 @@
         }
     }
     @media screen and (max-width:570px) {
+
     }
 </style>

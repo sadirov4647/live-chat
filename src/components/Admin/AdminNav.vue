@@ -1,6 +1,6 @@
 <template>
-    <div class="admin-nav">
-        <router-link class="admin-nav__links active" :to="{name:'Main'}">
+    <div class="admin-nav" :class="{ 'menu': clicked }">
+        <router-link class="admin-nav__links" :to="{name:'Main'}">
             <img :src="mainPageImage" alt="main image" width="40" height="40">
             <p>Asosiy sahifa</p>
         </router-link>
@@ -12,7 +12,7 @@
             <img :src="operatorImage" alt="opererator" width="40" height="40">
             <p>Operator sozlamasi</p>
         </router-link>
-        <router-link class="admin-nav__links" :to="{name:'BotSettings'}">
+        <router-link class="admin-nav__links" :to="{name:'BotSettings'}" >
             <img :src="settingsBot" alt="" width="40" height="40">
             <p>Bot sozlamasi</p>
         </router-link>
@@ -29,17 +29,19 @@
     import MainPageImage from '../../assets/images/mainPage.png'
     export default {
         name:"Admin",
+        props:["clicked"],
         data(){
             return{
                 settingsBot:SettingsBotImage,
                 operatorImage:OperatorImage,
                 mainPageImage:MainPageImage
             }
-        }
+        },
     }
 </script>
 
 <style scoped>
+
     .personal-page{
         align-self: center;
     }
@@ -66,6 +68,9 @@
         text-decoration: none;
         color: #fff;
     }
+    .admin-nav__links:active{
+        background-color: #205BB7;;
+    }
     .admin-nav__links p{
         margin: 0;
         font-weight: bold;
@@ -84,9 +89,6 @@
     .chat-title{
         display: none;
     }
-    .active{
-        background-color: #205BB7;
-    }
     @media screen and (max-width:820px) {
         .admin-nav__links p{
             display: none;
@@ -104,9 +106,24 @@
         }
     }
     @media screen and (max-width:520px) {
+        .menu{
+            transform: translateX(0px) !important;
+        }
         .admin-nav{
             transform: translateX(-600px);
             position: fixed;
+            max-width: 300px;
+            width: 100%;
+            z-index: 99;
+        }
+        .admin-nav__links p{
+            display: block;
+        }
+        .chat-title{
+            display: flex;
+        }
+        .admin-nav__links{
+            width: 80%;
         }
     }
 </style>

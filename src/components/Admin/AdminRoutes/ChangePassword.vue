@@ -9,7 +9,7 @@
             </li>
             <li class="change-password__item">
                 <label for="new-password">Yangi parolni kiriting</label>
-                <input type="password" name="old-password" id="old-password">
+                <input type="password" name="old-password" id="new-password">
             </li>
             <li class="change-password__item">
                 <label for="new-again__password">Yangi parolni takrorlang</label>
