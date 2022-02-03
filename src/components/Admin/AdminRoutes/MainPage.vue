@@ -3,13 +3,11 @@
         <div class="main-top">
             <h2>Asosiy sahifa</h2>
 
-            <label for="data"></label>
-            <input list="dataselect" name="data" id="data" v-model="date" placeholder="Kunlik">
-            <datalist id="dataselect">
-              <option value="Kunlik" selected></option>
-              <option value="Haftalik"></option>
-              <option value="Oylik"></option>
-            </datalist>
+            <v-select
+      class="style-chooser"
+      placeholder="Choose a Styling Option"
+      :options="['Components', 'CSS / Variables', 'Slots']"
+    />
         </div>
         <div class="main-charts">
             <div>
@@ -46,10 +44,12 @@
 
 <script>
     import AreaChart from '../AdminRoutes/AreaChart.vue'
+    import 'vue-select/dist/vue-select.css';
+    import vSelect from '../../../main'
     export default {
         name:"MainPage",
         components:{
-            AreaChart
+            AreaChart,
         },
         data(){
             return{
@@ -78,6 +78,20 @@
 </script>
 
 <style scoped>
+    .style-chooser .vs__search::placeholder,
+.style-chooser .vs__dropdown-toggle,
+.style-chooser .vs__dropdown-menu {
+  background: #dfe5fb;
+  border: none;
+  color: #394066;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.style-chooser .vs__clear,
+.style-chooser .vs__open-indicator {
+  fill: #394066;
+}
     .main-top{
         display: flex;
         justify-content: space-between;

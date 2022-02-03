@@ -25,7 +25,6 @@
 
 <style scoped>
     .chat-item{
-        background-color: #3672CF;
         padding: 14px 14px;
     }
     .chat-item a{

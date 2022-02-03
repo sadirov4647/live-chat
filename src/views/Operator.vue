@@ -81,7 +81,9 @@
     }
     .chat-list{
         padding: 0;
+        background-color: #3672CF;
         margin: 0;
+        height: 100vh;
         list-style-type: none;
     }
     .chat-right{

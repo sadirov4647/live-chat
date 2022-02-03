@@ -62,10 +62,10 @@
                 let ok = document.querySelector('.main-top-user__list');
                 if(this.userModall){
                     this.userModall = !this.userModall
-                    ok.style.transform = "translateX(-1300px)"
+                    ok.style.display = "none"
                 }else{
                     this.userModall = !this.userModall
-                     ok.style.transform = "translateX(0)"
+                     ok.style.display = "block"
                 }
             }
         }
@@ -155,7 +155,6 @@
     .main-top-user__list{
         top: 80px;
         z-index: 99;
-        transform: translateX(-1300px);
         padding: 0;
         margin: 0;
         list-style-type: none;
@@ -165,7 +164,7 @@
         right: 5%;
         background-color: #fff;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-        transition: 0.3s;
+        display: none;
     }
     .main-top-user__item p{
         margin: 0;

@@ -59,6 +59,7 @@
             EventService.getOperatorId(this.id)
             .then(response => {
                 this.operatorChat = response.data.chatted
+                console.log(response.data)
             })
         },
     }

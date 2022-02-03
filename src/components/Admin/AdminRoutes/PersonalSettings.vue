@@ -39,8 +39,8 @@
     }
     .personal-settings__title::before{
         content: '';
-        background: url(../../../assets/images/settingsbot.png);
-        width: 56px;
+        background: url(../../../assets/images/changepass.svg);
+        width: 57px;
         height: 50px;
         margin-right: 30px;
         background-repeat: no-repeat;
