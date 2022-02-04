@@ -1,10 +1,10 @@
 <template>
     <div class="admin-nav" :class="{ 'menu': clicked }">
-        <router-link class="admin-nav__links" :to="{name:'Main'}">
+        <router-link class="admin-nav__links active" :to="{name:'Main'}">
             <img :src="mainPageImage" alt="main image" width="40" height="40">
             <p>Asosiy sahifa</p>
         </router-link>
-        <router-link class="admin-nav__links" :to="{name:'Report'}">
+        <router-link class="admin-nav__links" :to="{name:'Report'}" @click="activeBlock">
             <img :src="operatorImage" alt="" width="40" height="40">
             <p>Hisobotni olish</p>
         </router-link>
@@ -41,7 +41,9 @@
 </script>
 
 <style scoped>
-
+.router-link-active{
+    background-color: #205BB7;
+}
     .personal-page{
         align-self: center;
     }
@@ -56,7 +58,7 @@
         border-top-right-radius: 60px;
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 100vh;
     }
     .admin-nav__links{
         display: flex;
@@ -67,9 +69,6 @@
         padding-right: 20px;
         text-decoration: none;
         color: #fff;
-    }
-    .admin-nav__links:active{
-        background-color: #205BB7;;
     }
     .admin-nav__links p{
         margin: 0;
@@ -88,6 +87,10 @@
     }
     .chat-title{
         display: none;
+    }
+    .personal-page{
+        padding-left: 70px;
+        padding-right: 73px;
     }
     @media screen and (max-width:820px) {
         .admin-nav__links p{

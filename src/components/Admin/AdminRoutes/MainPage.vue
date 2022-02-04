@@ -3,11 +3,11 @@
         <div class="main-top">
             <h2>Asosiy sahifa</h2>
 
-            <v-select
-      class="style-chooser"
-      placeholder="Choose a Styling Option"
-      :options="['Components', 'CSS / Variables', 'Slots']"
-    />
+            <select name="" id="">
+                <option value="salom">salom</option>
+                <option value="salom">salom</option>
+                <option value="salom">salom</option>
+            </select>
         </div>
         <div class="main-charts">
             <div>
@@ -44,8 +44,6 @@
 
 <script>
     import AreaChart from '../AdminRoutes/AreaChart.vue'
-    import 'vue-select/dist/vue-select.css';
-    import vSelect from '../../../main'
     export default {
         name:"MainPage",
         components:{

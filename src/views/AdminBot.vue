@@ -49,7 +49,7 @@
         text-align: center;
     }
     .bot-choose:active{
-        background-color: #FBFBFB;
+        background-color: #d6cfcf;
     }
     .bot-choose{
         align-items: center;

@@ -47,4 +47,31 @@
         font-size: 12px;
         line-height: 14px;
     }
+
+    @media screen and (max-width:600px) {
+        .chat-item__wrapper h5{
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .chat-item img{
+            margin-right: 8px;
+        }
+        .chat-item{
+            padding: 8px 8px;
+        }
+    }
+    @media screen and (max-width:571px) {
+        .chat-item__wrapper h5{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .chat-item__wrapper p{
+            font-size: 10px;
+            line-height: 14px;
+        }
+        .chat-item img{
+            width: 35px;
+            height: 35px;
+        }
+    }
 </style>

@@ -11,12 +11,12 @@
             <img :src="operatorimage" alt="chat operator image" width="60" height="60">
         </div>
     </div>
-        <form class="chatter-footer" @submit.prevent="addMessage">
-            <button><img :src="sendsticker" alt="" width="35" height="35"></button>
-            <button><img :src="sendfile" alt="" width="26" height="35"></button>
-            <input type="text" placeholder="xabar jo`natish uchun bu yerga biror nima yozing..." v-model="operatorText">
-            <button><img :src="sendoperator" alt="send operator" width="44" height="36"></button>
-        </form>
+    <form class="chatter-footer" @submit.prevent="addMessage">
+        <button><img :src="sendsticker" alt="" width="35" height="35"></button>
+        <button><img :src="sendfile" alt="" width="26" height="35"></button>
+        <input type="text" placeholder="xabar jo`natish uchun bu yerga biror nima yozing..." v-model="operatorText">
+        <button><img :src="sendoperator" alt="send operator" width="44" height="36"></button>
+    </form>
 </template>
 
 <script>
@@ -120,5 +120,19 @@
         border: none;
         flex-grow: 1;
         text-align: center;
+    }
+
+    @media screen and (max-width:571px) {
+        .chatter-user__wrapper img{
+            width: 50px;
+            height: 50px;
+        }
+        .chatter-operator__wrapper img{
+            width: 50px;
+            height: 50px;
+        }
+        .chatter-text{
+            padding: 10px 15px;
+        }
     }
 </style>

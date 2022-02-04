@@ -37,10 +37,10 @@
 <script>
     import MenuBtn from  '../../assets/images/menu.svg'
     import MainLogo from '../../assets/images/mainlogo.png'
-    import WarningIcon from '../../assets/images/mainimages/warnicon.png'
-    import QuestionIcon from '../../assets/images/mainimages/questionicon.png'
-    import SettingsIcon from '../../assets/images/mainimages/settings.png'
-    import UserIcon from '../../assets/images/mainimages/userphoto.png'
+    import WarningIcon from '../../assets/images/mainimages/warning.svg'
+    import QuestionIcon from '../../assets/images/mainimages/questionicon.svg'
+    import SettingsIcon from '../../assets/images/mainimages/settingsicon.svg'
+    import UserIcon from '../../assets/images/mainimages/userpic.svg'
     export default {
         name:"AdminTop",
         data(){
@@ -122,8 +122,8 @@
     .admin-top__input::before{
         content: "";
         background: url('../../assets/images/search.svg');
-        width: 23px;
-        height: 26px;
+        width: 35px;
+        height: 20px;
         background-size: contain;
         background-repeat: no-repeat;
         margin-right: 30px;

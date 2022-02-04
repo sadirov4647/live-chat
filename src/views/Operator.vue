@@ -12,8 +12,8 @@
                 <div class="chat-right__top">
                     <h2 class="chat-right__title">Yozishmalar ro'yxati</h2>
                     <div class="chat-right__btns">
-                        <button><img :src="searchImage" alt="search icon" width="25" height="25"></button>
-                        <button @click="blackModal"><img :src="userActionImage" alt="user action" width="7" height="30"></button>
+                        <button class="operator-search"><img :src="searchImage" alt="search icon" width="25" height="25"></button>
+                        <button class="black-modal" @click="blackModal"><img :src="userActionImage" alt="user action" width="7" height="30"></button>
                         <ul v-if="isblackModal" class="black-modal__list">
                             <li class="black-modal__item black-list">Qora ro'yxatga kiritish</li>
                             <li class="black-modal__item user-complain">Arz qilish</li>
@@ -73,6 +73,8 @@
         display: flex;
     }
     .chat-list__title{
+        font-size: 26px;
+        line-height: 30px;
         padding: 40px 20px;
         background: #2262C6;
         border-radius: 0px 102px 0px 0px;
@@ -95,6 +97,8 @@
         padding-left: 50px;
     }
     .chat-right__title{
+        font-size: 30px;
+        line-height: 42px;
         margin: 0;
         color: #2262C6;
     }
@@ -112,8 +116,11 @@
         border: none;
         cursor: pointer;
     }
-    .chat-right__btns button:not(:last-child){
-        margin-right: 40px;
+    .operator-search{
+        margin-right: 30px;
+    }
+    .black-modal{
+        position: relative;
     }
     .black-modal__list{
         position: absolute;
@@ -122,7 +129,7 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        right: 10%;
+        right: 5%;
         top: 25%;
         z-index: 99;
     }
@@ -150,5 +157,53 @@
     .user-complain::before{
         background: url(../assets/images/complain.svg);
         background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 2000px) {
+        .black-modal__list{
+            top: 12%;
+            right: 4%;
+        }
+    }
+    @media screen and (max-width: 1400px) {
+        .black-modal__list{
+            top: 25%;
+            right: 4%;
+        }
+    }
+
+    @media screen and (max-width: 792px) {
+        .chat-right__title{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .operator-search{
+            margin-right: 15px;
+        }
+        .chat-right{
+            padding-right: 20px;
+            padding-left: 15px;
+        }
+        .black-modal__list{
+            top: 10%;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .chat-list__title{
+            padding: 20px 15px;
+            font-size: 24px;
+            line-height: 32px   ;
+        }
+        .operator-search{
+            height: 20px;
+            width: 20px;
+        }
+        .chat-right__btns button img{
+            height: 20px;
+        }
+        .black-modal__list{
+            top: 10%;
+            right: 2%;
+        }
     }
 </style>
