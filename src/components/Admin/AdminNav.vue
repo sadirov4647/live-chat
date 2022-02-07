@@ -4,7 +4,7 @@
             <img :src="mainPageImage" alt="main image" width="40" height="40">
             <p>Asosiy sahifa</p>
         </router-link>
-        <router-link class="admin-nav__links" :to="{name:'Report'}" @click="activeBlock">
+        <router-link class="admin-nav__links" :to="{name:'Report'}">
             <img :src="operatorImage" alt="" width="40" height="40">
             <p>Hisobotni olish</p>
         </router-link>
@@ -54,7 +54,7 @@
         max-width: 300px;
         width: 100%;
         background-color: #2262C6;
-        padding-top: 60px;
+        padding-top: 90px;
         border-top-right-radius: 60px;
         display: flex;
         flex-direction: column;

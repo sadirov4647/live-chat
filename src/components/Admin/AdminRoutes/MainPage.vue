@@ -3,11 +3,15 @@
         <div class="main-top">
             <h2>Asosiy sahifa</h2>
 
-            <select name="" id="">
-                <option value="salom">salom</option>
-                <option value="salom">salom</option>
-                <option value="salom">salom</option>
-            </select>
+            <label for="standard-select"></label>
+            <div class="select">
+                <select id="standard-select">
+                    <option value="kunlik">Kunlik</option>
+                    <option value="haftalik">Haftalik</option>
+                    <option value="oylik">Oylik</option>
+                </select>
+                <span class="focus"></span>
+            </div>
         </div>
         <div class="main-charts">
             <div>
@@ -52,11 +56,15 @@
         data(){
             return{
                 date:'',
+                colors:'#D7E3FB',
                 series: [75,25],
                 chartOptions: {
                     chart: {
                         type: 'donut',
-                        width:300
+                        width:300,
+                        labels:{
+                            color:"black"
+                        }
                     },
                     responsive: [{
                         breakpoint: 480,
@@ -76,20 +84,63 @@
 </script>
 
 <style scoped>
-    .style-chooser .vs__search::placeholder,
-.style-chooser .vs__dropdown-toggle,
-.style-chooser .vs__dropdown-menu {
-  background: #dfe5fb;
-  border: none;
-  color: #394066;
-  text-transform: lowercase;
-  font-variant: small-caps;
-}
+    select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        z-index: 1;
+        outline: none;
+    }
+    #standard-select{
+        color: #CDCDCD;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    .select {
+        display: grid;
+        grid-template-areas: "select";
+        align-items: center;
+        position: relative;
+        min-width: 15ch;
+        max-width: 30ch;
+        border: 1px solid #CDCDCD;
+        border-radius: 0.25em;
+        padding: 0.25em 0.5em;
+        font-size: 1.25rem;
+        cursor: pointer;
+        line-height: 1.1;
+        background-color: #fff;
+        background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    }
+    .select select, .select::after {
+        grid-area: select;
+    }
+    .select:not(.select--multiple)::after {
+        content: "";
+        justify-self: end;
+        width: 0.8em;
+        height: 0.5em;
+        background-color: #777;
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+    select:focus + .focus {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        border: 2px solid #CDCDCD;
+        border-radius: inherit;
+    }
 
-.style-chooser .vs__clear,
-.style-chooser .vs__open-indicator {
-  fill: #394066;
-}
     .main-top{
         display: flex;
         justify-content: space-between;

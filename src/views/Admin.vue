@@ -44,9 +44,11 @@
     }
     .main-page__bottom{
         display: flex;
+        height: 100vh;
     }
     .routes{
         flex-grow: 1;
+        height: 100vh;
         padding: 40px;
     }
     @media screen and (max-width:820px) {

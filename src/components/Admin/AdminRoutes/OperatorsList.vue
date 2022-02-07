@@ -41,7 +41,7 @@
             },
             removeOperator(){
                 axios.delete(`http://localhost:3000/operators/${this.operator.id}`)
-                .then(this.isModal = !this.isModal)
+                this.isModal = !this.isModal
 
             }
         }
@@ -116,6 +116,7 @@
         border: none;
         color: #fff;
         cursor: pointer;
+        border-radius: 12px;
     }
     .modal-yes{
         background-color: #C4C4C4;

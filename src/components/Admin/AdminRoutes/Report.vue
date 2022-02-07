@@ -7,41 +7,17 @@
             <ul class="report-operator__list">
                 <ReportList :operator="operator" v-for="(operator, id) in operators" :key="id"/>
             </ul>
-            <ul class="pagination">
-				<li class="page-item">
-					<button
-                    type="button"
-                    class="page-link"
-                    v-if="page != 1"
-                    @click="page--">
-                    Previous
-                </button>
-				</li>
-				<li class="page-item">
-					<button type="button"
-                    class="page-link"
-                    v-for="pageNumber in pages.slice(page-1, page+5)"
-                    :key="pageNumber" @click="page = pageNumber">
-                     {{ pageNumber }}
-                 </button>
-				</li>
-				<li class="page-item">
-					<button
-                    type="button"
-                    @click="page++"
-                    v-if="page < pages.length"
-                    class="page-link">
-                    Next
-                </button>
-				</li>
-			</ul>
+            <section class="pagination">
+                <button :disabled="page === 1" @click="page--">Oldingi</button>
+                <button :disabled="operators.length == 0" @click="page++">Keyingi</button>
+            </section>
         </div>
     </div>
 </template>
 
 <script>
     import ReportList from '../AdminRoutes/ReportList.vue'
-    import EventServices from '../../../../services/EventServices'
+    import axios from 'axios'
     export default {
         name:"Report",
         components:{
@@ -50,51 +26,54 @@
         data(){
             return{
                 operators:[],
+                limit: 4,
                 page: 1,
-                perPage: 4,
-                pages: [],
             }
         },
-        mounted(){
-            EventServices.getOperators(this.page, this.perPage)
-            .then(response => {
-                this.operators = response.data
-            })
-        },
-        methods:{
-            setPages () {
-                let numberOfPages = Math.ceil(this.operators.length / this.perPage);
-                for (let index = 1; index <= numberOfPages; index++) {
-                    this.pages.push(index);
-                }
+        computed: {
+            pagination() {
+                return {
+                    _limit: 4,
+                    _start: (this.page - 1) * this.limit + 1,
+                };
             },
-            paginate(operators){
-                let page = this.page;
-                let perPage = this.perPage;
-                let from = (page * perPage) - perPage;
-                let to = (page * perPage);
-                return operators.slice(from, to)
-            }
         },
-        computed:{
-            displayOperators(){
-                return this.paginate(this.operators)
-            }
+        watch: {
+            pagination: {
+                deep: true,
+                immediate: true,
+                handler: 'fetchTodos',
+            },
         },
-        watch:{
-            operators(){
-                this.setPages()
-            }
+        methods: {
+            async fetchTodos() {
+                const { _start, _limit } = this.pagination;
+                const response = await axios.get('http://localhost:3000/operators', {
+                    params: { _start, _limit },
+                });
+                this.operators = response.data;
+                console.log(response.data)
+            },
         },
-        filters: {
-            trimWords(value){
-                return value.split(" ").splice(0,20).join(" ") + '...';
-            }
-        }
     }
 </script>
 
 <style scoped>
+    .pagination button{
+        background-color: #2262C6;
+        color: #fff;
+        border: none;
+        border: 1px solid #2262C6;
+        border-radius: 12px;
+        padding: 10px;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+    .pagination button:hover{
+        background-color: #fff;
+        color: #2262C6;
+        border: 1px solid #2262C6;
+    }
     .report-operator__list{
         list-style-type: none;
         padding: 0;
@@ -115,7 +94,7 @@
         color: #CBCBCB;
         text-align: center;
         line-height: 34px;
-    font-size: 24px;
+        font-size: 24px;
     }
     .pagination{
         list-style-type: none;
