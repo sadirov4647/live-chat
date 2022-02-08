@@ -4,7 +4,7 @@
           <img class="menu-btn" :src="menubtn" alt="menu" width="35" height="35">
         </button>
         <router-link to="/">
-            <img class="main-logo" :src="mainLogo" alt="main logo" width="300" height="72">
+            <img class="main-logo" :src="mainLogo" alt="main logo" width="280" height="60">
         </router-link>
         <div class="admin-top__input">
             <label for="search"></label>
@@ -36,7 +36,7 @@
 
 <script>
     import MenuBtn from  '../../assets/images/menu.svg'
-    import MainLogo from '../../assets/images/mainlogo.png'
+    import MainLogo from '../../assets/images/logo.svg'
     import WarningIcon from '../../assets/images/mainimages/warning.svg'
     import QuestionIcon from '../../assets/images/mainimages/questionicon.svg'
     import SettingsIcon from '../../assets/images/mainimages/settingsicon.svg'

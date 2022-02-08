@@ -15,7 +15,7 @@ body{
 }
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px #CDCDCD;
     -webkit-border-radius: 6px;
     border-radius: 6px;
 }
@@ -23,11 +23,11 @@ body{
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 6px;
     border-radius: 6px;
-    background: rgba(255,0,0,0.8);
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: #CDCDCD;
+    -webkit-box-shadow: inset 0 0 6px #CDCDCD;
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255,0,0,0.4);
+    background: #CDCDCD;
 }
 #app {
   font-family: 'Roboto', 'PT Sans Caption', sans-serif;

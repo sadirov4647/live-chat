@@ -1,19 +1,19 @@
 <template>
     <div class="admin-nav" :class="{ 'menu': clicked }">
         <router-link class="admin-nav__links active" :to="{name:'Main'}">
-            <img :src="mainPageImage" alt="main image" width="40" height="40">
+            <img :src="mainPageImage" alt="main image" width="35" height="35">
             <p>Asosiy sahifa</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'Report'}">
-            <img :src="operatorImage" alt="" width="40" height="40">
+            <img :src="operatorImage" alt="" width="35" height="35">
             <p>Hisobotni olish</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'OperatorSettings'}">
-            <img :src="operatorImage" alt="opererator" width="40" height="40">
+            <img :src="operatorImage" alt="opererator" width="35" height="35">
             <p>Operator sozlamasi</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'BotSettings'}" >
-            <img :src="settingsBot" alt="" width="40" height="40">
+            <img :src="settingsBot" alt="" width="35" height="35">
             <p>Bot sozlamasi</p>
         </router-link>
         <hr>
@@ -41,9 +41,9 @@
 </script>
 
 <style scoped>
-.router-link-active{
-    background-color: #205BB7;
-}
+    .router-link-active{
+        background-color: #205BB7;
+    }
     .personal-page{
         align-self: center;
     }
@@ -51,10 +51,10 @@
         width: 100%;
     }
     .admin-nav{
-        max-width: 300px;
+        max-width: 260px;
         width: 100%;
         background-color: #2262C6;
-        padding-top: 90px;
+        padding-top: 54px;
         border-top-right-radius: 60px;
         display: flex;
         flex-direction: column;
@@ -63,7 +63,7 @@
     .admin-nav__links{
         display: flex;
         align-items: center;
-        padding: 21px 0;
+        padding: 15px 0;
         justify-content: space-between;
         padding-left: 20px;
         padding-right: 20px;
@@ -73,7 +73,8 @@
     .admin-nav__links p{
         margin: 0;
         font-weight: bold;
-        font-size: 18px;
+        white-space: nowrap;
+        font-size: 16px;
         line-height: 22px;
     }
     .chat{

@@ -8,9 +8,6 @@
                     <p>{{ operator.email }}</p>
                 </div>
             </div>
-            <button class="remove-btn" @click="removeOperatorModal">
-                <img :src="removeIcon" alt="remove icon" width="24" height="24">
-            </button>
         </router-link>
     </li>
 </template>

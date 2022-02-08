@@ -3,15 +3,11 @@
         <div class="main-top">
             <h2>Asosiy sahifa</h2>
 
-            <label for="standard-select"></label>
-            <div class="select">
-                <select id="standard-select">
-                    <option value="kunlik">Kunlik</option>
-                    <option value="haftalik">Haftalik</option>
-                    <option value="oylik">Oylik</option>
-                </select>
-                <span class="focus"></span>
-            </div>
+            <dropdown
+            :options="arrayOfObjects"
+            :selected="object"
+            v-on:updateOption="methodToRunOnSelect"
+            ></dropdown>
         </div>
         <div class="main-charts">
             <div>
@@ -48,13 +44,19 @@
 
 <script>
     import AreaChart from '../AdminRoutes/AreaChart.vue'
+    import dropdown from 'vue-dropdowns';
     export default {
         name:"MainPage",
         components:{
             AreaChart,
+            'dropdown': dropdown,
         },
         data(){
             return{
+                arrayOfObjects: [],
+                object: {
+                name: 'Object Name',
+                },
                 date:'',
                 colors:'#D7E3FB',
                 series: [75,25],
@@ -66,6 +68,10 @@
                             color:"black"
                         }
                     },
+                    colors: ['#6EA3F5', '##D7E3FB'],
+                    dataLabels: {
+                        enabled: true,
+                    },
                     responsive: [{
                         breakpoint: 480,
                         options: {
@@ -76,10 +82,16 @@
                                 position: 'bottom'
                             }
                         }
-                    }]
+                    }],
+
                 },
             }
         },
+        methods: {
+          methodToRunOnSelect(payload) {
+            this.object = payload;
+          }
+        }
     }
 </script>
 

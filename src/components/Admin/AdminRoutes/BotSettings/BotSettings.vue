@@ -23,7 +23,7 @@
                             <img :src="bigEdit" alt="edit bot title" width="18" height="18">
                         </router-link>
                     </div>
-                    <textarea class="bot-description" name="description" cols="10" rows="5"></textarea>
+                    <textarea class="bot-description" name="description" cols="10" rows="5" disabled    ></textarea>
                 </div>
             </div>
             <div class="bot-info">

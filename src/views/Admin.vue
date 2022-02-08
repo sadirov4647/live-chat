@@ -49,7 +49,7 @@
     .routes{
         flex-grow: 1;
         height: 100vh;
-        padding: 40px;
+        padding: 30px;
     }
     @media screen and (max-width:820px) {
         .routes{

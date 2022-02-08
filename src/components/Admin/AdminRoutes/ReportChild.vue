@@ -100,8 +100,8 @@
         color: #2262C6;
         text-align: left;
         font-weight: bold;
-        font-size: 40px;
-        line-height: 52px;
+        font-size: 26px;
+        line-height: 36px;
         margin: 0;
     }
     hr{
@@ -124,6 +124,8 @@
         display: none;
     }
     .reportchild-operator__info h3{
+        font-size: 26px;
+        line-height: 36px;
         margin: 0;
         margin-bottom: 10px;
     }
@@ -179,11 +181,24 @@
             grid-template-columns: 1fr 1fr;
         }
     }
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:860px) {
+        .reportchild-operator__info h3{
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .date-select{
+            padding: 12px 0;
+            padding-right: 33px;
+            padding-left: 11px;
+        }
+
+    }
+    @media screen and (max-width:830px) {
         .reportchild h2{
             font-size: 30px;
             line-height: 42px;
         }
+
     }
     @media screen and (max-width:670px) {
         .reportchild-operator__info{
