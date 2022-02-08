@@ -8,6 +8,7 @@
         v-model="myValue"
         :options="myOptions"
         :settings="{placeholder: 'Specifies the placeholder through settings', width: '200px', settingOption: value, settingOption: value,}"
+        data-minimum-results-for-search="Infinity"
         @change="myChangeEvent($event)"
         @select="mySelectEvent($event)" />
       </div>
