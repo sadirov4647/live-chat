@@ -40,15 +40,12 @@
     .main-page{
         display: flex;
         flex-direction: column;
-        height: 100vh;
     }
     .main-page__bottom{
         display: flex;
-        height: 100vh;
     }
     .routes{
         flex-grow: 1;
-        height: 100vh;
         padding: 30px;
     }
     @media screen and (max-width:820px) {

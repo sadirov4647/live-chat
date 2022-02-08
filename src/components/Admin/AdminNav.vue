@@ -55,10 +55,10 @@
         width: 100%;
         background-color: #2262C6;
         padding-top: 54px;
+        padding-bottom: 250px;
         border-top-right-radius: 60px;
         display: flex;
         flex-direction: column;
-        height: 100vh;
     }
     .admin-nav__links{
         display: flex;
