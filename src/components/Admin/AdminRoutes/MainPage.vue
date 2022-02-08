@@ -3,11 +3,10 @@
         <div class="main-top">
             <h2>Asosiy sahifa</h2>
 
-            <dropdown
-            :options="arrayOfObjects"
-            :selected="object"
-            v-on:updateOption="methodToRunOnSelect"
-            ></dropdown>
+            <div>
+                <vueSelect class="vue-select1" name="select1" :options="options1">
+                </vueSelect>
+              </div>
         </div>
         <div class="main-charts">
             <div>
@@ -44,19 +43,20 @@
 
 <script>
     import AreaChart from '../AdminRoutes/AreaChart.vue'
-    import dropdown from 'vue-dropdowns';
+    import  vueSelect from 'vue-select2'
     export default {
         name:"MainPage",
         components:{
             AreaChart,
-            'dropdown': dropdown,
+            vueSelect
         },
         data(){
             return{
-                arrayOfObjects: [],
-                object: {
-                name: 'Object Name',
-                },
+                options1: [
+                "value1",
+                "value2",
+                "value3"
+                ],
                 date:'',
                 colors:'#D7E3FB',
                 series: [75,25],
@@ -68,7 +68,7 @@
                             color:"black"
                         }
                     },
-                    colors: ['#6EA3F5', '##D7E3FB'],
+                    colors: ['#6EA3F5', '#D7E3FB'],
                     dataLabels: {
                         enabled: true,
                     },
@@ -87,72 +87,10 @@
                 },
             }
         },
-        methods: {
-          methodToRunOnSelect(payload) {
-            this.object = payload;
-          }
-        }
     }
 </script>
 
 <style scoped>
-    select {
-        appearance: none;
-        background-color: transparent;
-        border: none;
-        padding: 0 1em 0 0;
-        margin: 0;
-        width: 100%;
-        font-family: inherit;
-        font-size: inherit;
-        cursor: inherit;
-        line-height: inherit;
-        z-index: 1;
-        outline: none;
-    }
-    #standard-select{
-        color: #CDCDCD;
-    }
-    select::-ms-expand {
-        display: none;
-    }
-    .select {
-        display: grid;
-        grid-template-areas: "select";
-        align-items: center;
-        position: relative;
-        min-width: 15ch;
-        max-width: 30ch;
-        border: 1px solid #CDCDCD;
-        border-radius: 0.25em;
-        padding: 0.25em 0.5em;
-        font-size: 1.25rem;
-        cursor: pointer;
-        line-height: 1.1;
-        background-color: #fff;
-        background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-    }
-    .select select, .select::after {
-        grid-area: select;
-    }
-    .select:not(.select--multiple)::after {
-        content: "";
-        justify-self: end;
-        width: 0.8em;
-        height: 0.5em;
-        background-color: #777;
-        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    }
-    select:focus + .focus {
-        position: absolute;
-        top: -1px;
-        left: -1px;
-        right: -1px;
-        bottom: -1px;
-        border: 2px solid #CDCDCD;
-        border-radius: inherit;
-    }
-
     .main-top{
         display: flex;
         justify-content: space-between;

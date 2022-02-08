@@ -90,7 +90,7 @@
         display: none;
     }
     .personal-page{
-        padding-left: 70px;
+        padding-left: 47px;
         padding-right: 73px;
     }
     @media screen and (max-width:820px) {

@@ -181,7 +181,7 @@
             grid-template-columns: 1fr 1fr;
         }
     }
-    @media screen and (max-width:860px) {
+    @media screen and (max-width:865px) {
         .reportchild-operator__info h3{
             font-size: 22px;
             line-height: 30px;
@@ -190,6 +190,9 @@
             padding: 12px 0;
             padding-right: 33px;
             padding-left: 11px;
+        }
+        .reportchild-operator__info{
+            margin-left: 48px;
         }
 
     }
