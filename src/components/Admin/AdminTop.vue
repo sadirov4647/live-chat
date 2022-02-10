@@ -212,7 +212,12 @@
             display: none;
         }
     }
-
+    @media screen and (max-width: 630px) {
+        .admin-top__input{
+            padding: 12px 10px;
+            margin-right: 15px;
+        }
+    }
     @media screen and (max-width: 570px) {
         .admin-top__input::before {
             display: none;

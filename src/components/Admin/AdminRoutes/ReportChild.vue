@@ -92,8 +92,6 @@
 <style scoped>
     .reportchild{
         max-width: 800px;
-        padding-left: 75px;
-        padding-right: 90px;
         margin: 0 auto;
     }
     .reportchild h2{
@@ -211,7 +209,7 @@
     @media screen and (max-width:570px) {
         .report-date__info{
             grid-template-columns: 1fr;
-            align-items: center;
+            justify-items: center;
         }
         .reportchild-operator__wrapper h3{
             font-size: 18px;
@@ -223,6 +221,14 @@
         }
         .reportchild{
             padding: 20px;
+        }
+        .choose-report__date{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .choose-report__date p{
+            margin-bottom: 16px;
         }
         .choose-report__date-title{
             font-size: 18px;

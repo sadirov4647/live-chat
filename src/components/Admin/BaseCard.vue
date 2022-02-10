@@ -40,6 +40,13 @@
         color: #8AB5CB;
     }
 
+    @media screen and (max-width:570px) {
+        .report-date__card{
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+
     @media screen and (max-width:520px) {
         .report-date__card{
             max-width: 200px;
