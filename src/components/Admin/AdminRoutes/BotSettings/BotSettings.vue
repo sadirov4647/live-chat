@@ -241,6 +241,11 @@
             padding: 20px;
         }
     }
+    @media screen and (max-width:520p) {
+        .bot-settings{
+            padding-top: 100px;
+        }
+    }
     @media screen and (max-width:500px) {
         .bot-info__header h4{
             font-size: 16px;

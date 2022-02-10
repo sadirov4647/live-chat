@@ -53,7 +53,9 @@
             padding: 20px;
         }
     }
-    @media screen and (max-width:570px) {
-
+    @media screen and (max-width:520px) {
+        .routes{
+            padding-top: 100px;
+        }
     }
 </style>

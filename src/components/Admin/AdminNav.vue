@@ -120,6 +120,8 @@
             max-width: 300px;
             width: 100%;
             z-index: 99;
+            height: 100%;
+            top: 9%;
         }
         .admin-nav__links p{
             display: block;
@@ -129,6 +131,9 @@
         }
         .admin-nav__links{
             width: 80%;
+        }
+        .personal-page{
+            padding-right: 13px;
         }
     }
 </style>
