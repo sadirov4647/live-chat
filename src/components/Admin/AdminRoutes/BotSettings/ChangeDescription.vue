@@ -68,4 +68,9 @@
             padding: 10px 22px;
         }
     }
+    @media screen and (max-width:365px) {
+        .change-desc__title{
+            font-size: 18px;
+        }
+    }
 </style>

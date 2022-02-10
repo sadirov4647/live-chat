@@ -5,7 +5,7 @@
             <p>Asosiy sahifa</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'Report'}">
-            <img :src="operatorImage" alt="" width="35" height="35">
+            <img :src="reportoperator" alt="" width="35" height="35">
             <p>Hisobotni olish</p>
         </router-link>
         <router-link class="admin-nav__links" :to="{name:'OperatorSettings'}">
@@ -24,14 +24,16 @@
 </template>
 
 <script>
-    import SettingsBotImage from '../../assets/images/settingsbot.png'
-    import OperatorImage from '../../assets/images/operator.png'
-    import MainPageImage from '../../assets/images/mainPage.png'
+    import SettingsBotImage from '../../assets/images/botsettings.svg'
+    import reportOperator from '../../assets/images/report.svg'
+    import OperatorImage from '../../assets/images/operatorsettings.svg'
+    import MainPageImage from '../../assets/images/mainicon.svg'
     export default {
         name:"Admin",
         props:["clicked"],
         data(){
             return{
+                reportoperator:reportOperator,
                 settingsBot:SettingsBotImage,
                 operatorImage:OperatorImage,
                 mainPageImage:MainPageImage
@@ -104,14 +106,13 @@
             align-items: center;
             max-width: 90px;
         }
-        .active{
-            max-width: 50px;
-            width: 100%;
-        }
     }
     @media screen and (max-width:520px) {
         .menu{
             transform: translateX(0px) !important;
+        }
+        .active{
+            max-width: 100%;
         }
         .admin-nav{
             transform: translateX(-600px);

@@ -7,8 +7,7 @@
         <Select2 class="select"
         v-model="myValue"
         :options="myOptions"
-        :settings="{placeholder: 'Specifies the placeholder through settings', width: '200px', settingOption: value, settingOption: value,}"
-        data-minimum-results-for-search="Infinity"
+        :settings="{placeholder: 'Kunlik', width: '200px', settingOption: value, settingOption: value,}"
         @change="myChangeEvent($event)"
         @select="mySelectEvent($event)" />
       </div>
@@ -62,7 +61,7 @@ export default {
   data() {
     return {
       myValue: '',
-      myOptions: ['op1', 'op2', 'op3'],
+      myOptions: ['Kunlik', 'Haftalik', 'Oylik'],
       date: '',
       colors: '#D7E3FB',
       series: [75, 25],

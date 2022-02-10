@@ -102,10 +102,13 @@
         flex-direction: column;
         left: 25%;
         top: 100px;
+        border-radius: 15px;
     }
     .remove-operator__modal p{
         margin: 0;
         margin-bottom: 16px;
+        color: #2262C6;
+        text-align: center;
     }
     .modal-features{
         display: flex;
@@ -124,6 +127,17 @@
     }
     .modal-no{
         background-color: #2262C6;
+    }
+    @media screen and (max-width:950px) {
+        .remove-operator__modal{
+            padding-top: 32px;
+            padding-bottom: 32px;
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+        .modal-features button{
+            padding: 16px 28px;
+        }
     }
     @media screen and (max-width:820px) {
         .operator-title{
