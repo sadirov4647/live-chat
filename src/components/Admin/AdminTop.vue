@@ -252,6 +252,7 @@
             position: fixed;
             width: 92%;
             z-index: 100;
+            filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.04));
         }
         .admin-top__warn {
             display: none;
