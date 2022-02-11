@@ -7,7 +7,7 @@
         <Select2 class="select"
         v-model="myValue"
         :options="myOptions"
-        :settings="{placeholder: 'Kunlik', width: '200px', settingOption: value, settingOption: value,}"
+        :settings="{placeholder: 'Kunlik', width: '200px', settingOption: value, settingOption: value}"
         @change="myChangeEvent($event)"
         @select="mySelectEvent($event)" />
       </div>
@@ -115,6 +115,9 @@
 <style scoped>
   .select2-container{
     width: 180px !important;
+  }
+  .select2--results{
+    color: blue !important;
   }
   .main-top {
     display: flex;

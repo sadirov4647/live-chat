@@ -248,7 +248,7 @@
     }
     @media screen and (max-width: 520px) {
         .admin-top{
-            background-color: rgb(232, 240, 248);
+            background-color: #ffffff;
             position: fixed;
             width: 92%;
             z-index: 100;
